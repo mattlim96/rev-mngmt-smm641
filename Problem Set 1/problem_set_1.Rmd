@@ -1,0 +1,187 @@
+##############
+### Q1 (a) ###
+##############
+
+mL=50           # Mean Demand for Breakfast, Poisson
+mH=20           # Mean Demand for Lunch, Poisson
+pL=1            # Price for Breakfast
+pH=1.5          # Price for Lunch
+capacity=50     # Capacity 
+ExpRevenue=rep(0,capacity+1)
+for (i in 1:1){
+  protect=i-1
+  availforBreakfast=capacity-protect;
+  ExpRevenue[i]=0;
+  for(dL in 0:200){
+    soldBreakfast=min(availforBreakfast,dL)
+    remainforLunch=capacity-soldBreakfast
+    for(dH in 0:200){
+      soldLunch=min(remainforLunch,dH)
+      RevenueThisIter=pL*soldBreakfast+pH*soldLunch
+      ExpRevenue[i]=ExpRevenue[i]+RevenueThisIter*dpois(dL,mL)*dpois(dH,mH)
+    }
+  }
+}
+RevenueFCFS=ExpRevenue[1]
+print(paste("Expected Daily Revenue (FCFS): £", round(RevenueFCFS,2)))
+
+##############
+### Q1 (b) ###
+##############
+
+mL=50           # Mean Demand for Breakfast, Poisson
+mH=20           # Mean Demand for Lunch, Poisson
+pL=1            # Price for Breakfast
+pH=1.5          # Price for Lunch
+capacity=50     # Capacity 
+ExpRevenue=rep(0,capacity+1)
+for (i in 1:(capacity+1)){
+  protect=i-1
+  availforLowFare=capacity-protect;
+  ExpRevenue[i]=0;
+  for(dL in 0:200){
+    soldLowFare=min(availforLowFare,dL)
+    remainforHighFare=capacity-soldLowFare
+    for(dH in 0:200){
+      soldHighFare=min(remainforHighFare,dH)
+      RevenueThisIter=pL*soldLowFare+pH*soldHighFare
+      ExpRevenue[i]=ExpRevenue[i]+
+        RevenueThisIter*dpois(dL,mL)*dpois(dH,mH)
+    }
+  }
+}
+Protectindexbest = which(ExpRevenue == max(ExpRevenue))
+ProtectBest=Protectindexbest-1
+OptimalExpRevenue=max(ExpRevenue)
+print(paste("The Optimal Protection Level to maximise Expected Daily Revenue:", ProtectBest))
+
+##############
+### Q1 (c) ###
+##############
+
+print(paste("Expected Daily Revenue with an Optimal Protection Level of", ProtectBest,": £", round(OptimalExpRevenue,2)))
+percImprovement = (OptimalExpRevenue - RevenueFCFS) / RevenueFCFS * 100
+print(paste("% improvement compared to Expected Daily Revenue (FCFS):", round(percImprovement,2),"%"))
+
+
+##############
+### Q1 (d) ###
+##############
+
+##############
+### Q2 (a) ###
+##############
+
+# Network Revenue Management with Dynamic Programming
+
+N1=100; # Leg 1 seat availability
+N2=120; # Leg 2 seat availability
+TT=300; # Length of time horizon
+
+arrivalprob=c(1/5, 4/15, 1/6, 4/15);
+
+price=c(150,120,250,180);
+
+# R requires arrays be created at the beginning.
+# Creating empty arrays of correct dimensions.
+# For the value function v(x1,x2,t):
+v=array(rep( 0, len=(N1+1)*(N2+1)*(TT+1)), dim=c(N1+1,N2+1,TT+1));
+# To keep track of optimal decisions,
+# e.g. acceptance decision for a product 1 arrival: accept1(x1,x2,t):
+accept1=array(rep( 0, len=(N1+1)*(N2+1)*(TT+1)), dim=c(N1+1,N2+1,TT+1));
+# remaining are similarly defined and created.
+accept2=array(rep( 0, len=(N1+1)*(N2+1)*(TT+1)), dim=c(N1+1,N2+1,TT+1));
+accept3=array(rep( 0, len=(N1+1)*(N2+1)*(TT+1)), dim=c(N1+1,N2+1,TT+1));
+accept4=array(rep( 0, len=(N1+1)*(N2+1)*(TT+1)), dim=c(N1+1,N2+1,TT+1));
+
+totalarrivalprob=sum(arrivalprob);
+noarrivalprob=1-totalarrivalprob;
+
+# Terminal Values
+for(i in 1:(N1+1)){
+  for(j in 1:(N2+1)){
+    v[i,j,1]=0; # All seats worthless at the end of horizon, i.e., t=1.
+  }
+}
+
+# Dynamic Programming Algorithm
+
+for(t in 2:(TT+1)){ #2:TT+1
+  for(i in 1:(N1+1)){ #1:N1+1
+    for(j in 1:(N2+1)){ #1:N2+1
+      
+      # For no arrivals:
+      vforarrival0=v[i,j,t-1];
+      
+      # For Product 1 arrival:
+      # default not accept unless able/profitable to accept
+      vforarrival1=v[i,j,t-1];
+      accept1[i,j,t]=0;
+      # If resource available:
+      if(i>1){
+        vforarrival1=max(price[1]+v[i-1,j,t-1],v[i,j,t-1]);
+        # Recording the decision in the accept1 variable:
+        if(price[1]+v[i-1,j,t-1]>v[i,j,t-1]){
+          accept1[i,j,t]=1;
+        }
+      }
+      
+      # For Product 2 arrival:
+      # default not accept unless able/profitable to accept
+      vforarrival2=v[i,j,t-1];
+      accept2[i,j,t]=0;
+      # If resource available:
+      if(j>1){
+        vforarrival2=max(price[2]+v[i,j-1,t-1],v[i,j,t-1]);
+        # Recording the decision in the accept2 variable:
+        if(price[2]+v[i,j-1,t-1]>v[i,j,t-1]){
+          accept2[i,j,t]=1;
+        }
+      }
+      
+      # For Product 3 arrival:
+      # default not accept unless able/profitable to accept
+      vforarrival3=v[i,j,t-1];
+      accept3[i,j,t]=0;
+      # If resources available:
+      if(i>1){
+        if(j>1){
+          vforarrival3=max(price[3]+v[i-1,j-1,t-1],v[i,j,t-1]);
+          # Recording the decision in the accept3 variable:
+          if(price[3]+v[i-1,j-1,t-1]>v[i,j,t-1]){
+            accept3[i,j,t]=1;
+          }
+        }
+      }
+      
+      # For Product 4 arrival:
+      # default not accept unless able/profitable to accept
+      vforarrival4=v[i,j,t-1];
+      accept4[i,j,t]=0;
+      # If resources available:
+      if(i>1){
+        if(j>1){
+          vforarrival4=max(price[4]+v[i-1,j-1,t-1],v[i,j,t-1]);
+          # Recording the decision in the accept4 variable:
+          if(price[4]+v[i-1,j-1,t-1]>v[i,j,t-1]){
+            accept4[i,j,t]=1;
+          }
+        }
+      }
+      
+      # Obtaining the overall value function from its parts:
+      v[i,j,t]=noarrivalprob*vforarrival0+
+        arrivalprob[1]*vforarrival1+
+        arrivalprob[2]*vforarrival2+
+        arrivalprob[3]*vforarrival3+
+        arrivalprob[4]*vforarrival4;
+    }
+  }
+}
+
+# Optimal Revenue Starting at
+# Leg 1 seat availability: N1=100 and
+# Leg 2 seat availability: N2=120
+# with T=300 periods to go:
+revenueDP<-v[101,121,301]
+print(revenueDP)

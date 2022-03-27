@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="en" xml:lang="en">
+<head>
+    <title>SMM641_PRD2_A_2021-22: 01-R-Supplement</title>
+    <link rel="shortcut icon" href="https://moodle.city.ac.uk/theme/image.php/cul_boost/theme/1644910456/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false},ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"UA8DU1NRGwcAXVNaAQM=",licenseKey:"e4ad0f6bec",applicationID:"4092862"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(28),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(29),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+l])try{window.performance[h](m,i,!1)}catch(t){}else try{window.performance[h]("webkit"+m,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d=t(19),l="learResourceTimings",p="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",S=t("loader");if(!S.disabled){S.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=S.now())}),a.on(b,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,S.now()])}),c.on(x,function(t,e,n){this.bstStart=S.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),this.bstType])}),f.on(x,function(){this.bstStart=S.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=S.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+l]?window.performance[p](m,i,d(!1)):window.performance[p]("webkit"+m,i,d(!1))),document[p]("scroll",o,d(!1)),document[p]("keypress",o,d(!1)),document[p]("click",o,d(!1))}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(29),a=t(28);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function o(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,S.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=t(19),p=NREUM.o,h=p.XHR,m=p.MO,v=p.PR,w=p.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,i,l(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,S=document.createTextNode(R);new m(a).observe(S,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&l())&&(w.traceContextParentHeader=i(h,m),w.traceContextStateHeader=o(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(25),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(20),m=t(18),v=t(15),w=t(19),g=t(21).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;if("string"==typeof o?n=o:"object"==typeof o&&o instanceof y?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n),"data"!==this.params.protocol){var s=(""+(o&&o instanceof y&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),o(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(28),s=t(29),c=t("ee").get("tracer"),f=t("loader"),u=t(21),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var l=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(l,function(t,e){d[e]=i(p,e,!0,"api")}),d.addPageAction=i(p,"addPageAction",!0),d.setCurrentRouteName=i(p,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],20:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[s,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:i}},{}],22:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(30);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],23:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],24:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var i=[r],o=a({});o&&i.push(o),p("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,l,p=t("handle"),h=t("loader"),m=t(27),v=t(19),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}l=new PerformanceObserver(o);try{l.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],25:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],26:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],27:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(19);e.exports=r;var o,a,s;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],28:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],29:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],30:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return l[t]=l[t]||i(n)}function w(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(28),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=O.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(R,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+O.offset],null,"api"),s("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=h+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){s("mark",["domContent",a()+O.offset],null,"api")}var a=t(22),s=t("handle"),c=t(28),f=t("ee"),u=t(26),d=t(23),l=t(17),p=t(19),h=l.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,w="addEventListener",g="attachEvent",y=m.XMLHttpRequest,x=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var E=""+location,R={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},S=y&&x&&x[w]&&!/CriOS/.test(navigator.userAgent),O=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:S,userAgent:u,disabled:b};if(!b){t(16),t(24),v[w]?(v[w]("DOMContentLoaded",o,p(!1)),m[w]("load",r,p(!1))):(v[g]("onreadystatechange",i),m[g]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(29),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);</script>
+<meta name="keywords" content="moodle, SMM641_PRD2_A_2021-22: 01-R-Supplement" />
+<link rel="stylesheet" type="text/css" href="https://moodle.city.ac.uk/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://moodle.city.ac.uk/theme/styles.php/cul_boost/1644910456_1644910657/all" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/moodle.city.ac.uk","sesskey":"X7FQ1XEYQV","sessiontimeout":"7200","themerev":"1644910456","slasharguments":1,"theme":"cul_boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1644910456","admin":"admin","svgicons":true,"usertimezone":"Europe\/London","contextid":2592943,"langrev":1644910456,"templaterev":"1644910456"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/moodle.city.ac.uk\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/moodle.city.ac.uk\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/moodle.city.ac.uk\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/moodle.city.ac.uk\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/moodle.city.ac.uk\/theme\/yui_combo.php?m\/1644910456\/","combine":true,"comboBase":"https:\/\/moodle.city.ac.uk\/theme\/yui_combo.php?","ext":false,"root":"m\/1644910456\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_aspirelists-inline_display":{"requires":["base","node","event","event-delegate"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_hsuforum-article":{"requires":["base","node","event","router","core_rating","querystring","moodle-mod_hsuforum-io","moodle-mod_hsuforum-livelog","moodle-core-formchangechecker"]},"moodle-mod_hsuforum-io":{"requires":["base","io-base","io-form","io-upload-iframe","json-parse"]},"moodle-mod_hsuforum-livelog":{"requires":["widget"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_scheduler-delselected":{"requires":["base","node","event"]},"moodle-mod_scheduler-saveseen":{"requires":["base","node","event"]},"moodle-mod_scheduler-studentlist":{"requires":["base","node","event","io"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_culactivity_stream-scroll":{"requires":["base","node","io","json-parse","dom-core","querystring","event-custom","moodle-core-dock"]},"moodle-block_culupcoming_events-scroll":{"requires":["base","node","io","json-parse","dom-core","querystring","event-custom","moodle-core-dock","node-event-simulate"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-format_grid-gridkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-local_culcourse_dashboard-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-local_kaltura-lticontainer":{"requires":["base","node"]},"moodle-local_kaltura-ltipanel":{"requires":["base","node","panel","node-event-simulate"]},"moodle-local_kaltura-ltiservice":{"requires":["base","node","node-event-simulate"]},"moodle-local_kaltura-ltitinymcepanel":{"requires":["base","node","panel","node-event-simulate"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_echo360attoplugin-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_htmlplus-beautify":{},"moodle-atto_htmlplus-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_htmlplus-beautify","moodle-atto_htmlplus-codemirror","event-valuechange"]},"moodle-atto_htmlplus-codemirror":{"requires":["moodle-atto_htmlplus-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_kalturamedia-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_teamsmeeting-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wiris-button":{"requires":["moodle-editor_atto-plugin","get"]}}},"gallery":{"name":"gallery","base":"https:\/\/moodle.city.ac.uk\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/moodle.city.ac.uk\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1644910456\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/moodle.city.ac.uk\/lib\/javascript.php\/1644910456\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/moodle.city.ac.uk\/lib\/javascript.php\/1644910456\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.8\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head><body  id="page-mod-resource-view" class="format-culcourse  path-mod path-mod-resource chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam moodle-city-ac-uk pagelayout-incourse course-42782 context-2592943 cmid-2145727 category-33 ">
+    <div>
+    <a class="sr-only sr-only-focusable" href="#accessibility">Skip to accessibility</a>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a>
+</div><script src="https://moodle.city.ac.uk/lib/javascript.php/1644910456/lib/babel-polyfill/polyfill.min.js"></script>
+<script src="https://moodle.city.ac.uk/lib/javascript.php/1644910456/lib/polyfills/polyfill.js"></script>
+<script src="https://moodle.city.ac.uk/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://moodle.city.ac.uk/theme/jquery.php/core/jquery-3.5.1.min.js"></script>
+<script src="https://moodle.city.ac.uk/theme/jquery.php/core/ui-1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://moodle.city.ac.uk/theme/jquery.php/core/ui-1.12.1/theme/smoothness/jquery-ui.min.css" />
+<script src="https://moodle.city.ac.uk/lib/javascript.php/1644910456/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+    
+    <nav id="top" class="navbar navbar-default d-block" role="header">
+        <div class="topmenu d-none d-md-block">
+            <div class="container-fluid">
+                <div id="cross-domain">
+                    <ul id="cross-domain-nav" class="d-flex flex-wrap">
+                        <li>
+                            <a href="https://www.bayes.city.ac.uk/">bayes.city.ac.uk</a>
+                        </li>
+                        <li>
+                            <a href="https://outlook.office.com/" target="_blank">Email</a>
+                        </li>
+                        <li>
+                            <a href="/" class="active" style="pointer-events: none">Moodle</a>
+                        </li>
+                        <li>
+                            <a href="https://www.city.ac.uk/library/">Library</a>
+                        </li>
+                        <li>
+                            <a href="http://www.bayes.city.ac.uk/intranet/student/">Student Hub</a>
+                        </li>
+                        <li>
+                            <a href="http://www.bayes.city.ac.uk/intranet/staff/">Staff Hub</a>
+                        </li>
+                </div>
+            </div>
+        </div>
+        <div class="main-navigation">
+            <div class="container-fluid d-lg-flex flex-wrap align-items-center position-relative py-3 py-md-4">
+                <div class="right-float-menu d-none d-lg-flex flex-wrap mx-auto mb-3">
+                    <li class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1a782620d3c89d77032" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"  aria-controls="drop-down-menu-620d3c8a1a782620d3c89d77032">
+        Tools
+    </a>
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-620d3c8a1a782620d3c89d77032" aria-labelledby="drop-down-620d3c8a1a782620d3c89d77032">
+                <a class="dropdown-item" role="menuitem" href="https://moodle.city.ac.uk/local/culrollover/" >Rollover Tool</a>
+                <a class="dropdown-item" role="menuitem" href="https://city-uk-ett.libguides.com/staff/moodle/new-year/import-rollover" target="_blank" >Guidance for Rollover</a>
+                <a class="dropdown-item" role="menuitem" href="https://blogs.city.ac.uk/moodle-health" target="_blank" >Moodle Health</a>
+    </div>
+</li><li class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1a877620d3c89d77033" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"  aria-controls="drop-down-menu-620d3c8a1a877620d3c89d77033">
+        Help &amp; Support
+    </a>
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-620d3c8a1a877620d3c89d77033" aria-labelledby="drop-down-620d3c8a1a877620d3c89d77033">
+                <a class="dropdown-item" role="menuitem" href="https://mediaspace.city.ac.uk/media/Welcome+to+Moodle+2021-22/1_wz70ld7c" target="_blank" >Induction Video</a>
+                <a class="dropdown-item" role="menuitem" href="https://moodle.city.ac.uk/course/view.php?id=42928" >Learning with Moodle</a>
+                <a class="dropdown-item" role="menuitem" href="https://www.city.ac.uk/edtechguides/student " target="_blank" >Student Guidance</a>
+                <a class="dropdown-item" role="menuitem" href="https://www.city.ac.uk/edtechguides/staff" target="_blank" >Staff Guidance</a>
+                <a class="dropdown-item" role="menuitem" href="https://blogs.city.ac.uk/accessibility/moodle/" target="_blank" >Accessibility Help</a>
+                <a class="dropdown-item" role="menuitem" href="https://cityuni.service-now.com/sp/" target="_blank" >IT Service Desk</a>
+                <a class="dropdown-item" role="menuitem" href="https://www.city.ac.uk/about/city-information/legal/data-protection/" target="_blank" >Privacy Notice</a>
+    </div>
+</li>
+                </div>
+                <div class="d-flex flex-wrap align-items-center w-100">
+                    <div class="navbar-header col py-2 pl-0">
+                        <div class="navbar-brand">
+                            <a href="/" id="theme-cul-boost-homelink" class="homelink">
+                                <img
+                                    src="https://moodle.city.ac.uk/theme/image.php/cul_boost/theme/1644910456/bayes-logo"
+                                    class="sitelogo bayeslogo"
+                                    alt="City, University of London"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-outer-wrap ml-auto">
+                        <div class="nav-wrap d-flex flex-wrap align-items-stretch">
+                            <a href="/" class="homelink">
+                                <img
+                                    src="https://moodle.city.ac.uk/theme/image.php/cul_boost/theme/1644910456/bayes-logo-white"
+                                    class="sitelogobayeslogo"
+                                    alt="City, University of London"
+                                />
+                            </a>
+                            <div class="nav-inner d-none d-lg-flex flex-wrap align-items-stretch ml-lg-auto">
+                                <a id="theme_cul_boost_mymoodle" class="nav-item nav-link d-flex flex-wrap align-items-center justify-content-center py-3" href="https://moodle.city.ac.uk/my/" title="My Moodle">My Moodle</a><div id="theme_cul_boost_mymodules" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-3">
+    <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1b520620d3c89d77034" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="My Modules" href="#">
+        My Modules
+    </a>
+    <div class="dropdown-menu mt-0" aria-labelledby="drop-down-620d3c8a1b520620d3c89d77034">
+        <div class="dropdown-item dropdown-submenu">
+            <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1b520620d3c89d77034" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="2021-22" href="#">
+                2021-22
+            </a>
+            <div class="dropdown-menu" aria-labelledby="drop-down-620d3c8a1b520620d3c89d77034">
+                <div class="dropdown-item dropdown-submenu">
+                    <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1b520620d3c89d77034" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="PRD1_2021-22" href="#">
+                        Term 1
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="drop-down-620d3c8a1b520620d3c89d77034">
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42777" title="SMM634 Analytics Methods for Business (PRD1 A 2021/22)">SMM634 Analytics Methods for Business (PRD1 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42784" title="SMM635 Data Visualisation (PRD1 A 2021/22)">SMM635 Data Visualisation (PRD1 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42780" title="SMM638 Network Analytics (PRD1 A 2021/22)">SMM638 Network Analytics (PRD1 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43996" title="SMM691 Professional Ethics and Good Academic Practice (PRD1 A 2021/22)">SMM691 Professional Ethics and Good Academic Practice (PRD1 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43162" title="SMM692 Introduction to Python Programming (PRD1 A 2021/22)">SMM692 Introduction to Python Programming (PRD1 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43163" title="SMM693 Introduction to R Programming PRD1 A 2021/22)">SMM693 Introduction to R Programming PRD1 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42836" title="SMM750 Digital Technologies and Value Creation (PRD1 A 2021/22)">SMM750 Digital Technologies and Value Creation (PRD1 A 2021/22)</a>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                <div class="dropdown-item dropdown-submenu">
+                    <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1b520620d3c89d77034" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="PRD2_2021-22" href="#">
+                        Term 2
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="drop-down-620d3c8a1b520620d3c89d77034">
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42786" title="SMM636 Machine Learning (PRD2 A 2021/22)">SMM636 Machine Learning (PRD2 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42781" title="SMM640 Strategic Business Analytics (PRD2 A 2021/22)">SMM640 Strategic Business Analytics (PRD2 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782" title="SMM641 Revenue Management and Pricing (PRD2 A 2021/22)">SMM641 Revenue Management and Pricing (PRD2 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42843" title="SMM768 Applied Deep Learning (PRD2 A 2021/22)">SMM768 Applied Deep Learning (PRD2 A 2021/22)</a>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43246" title="Business Library Services (2021/22)">Business Library Services (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43534" title="Careers and Employability Induction (2021/22)">Careers and Employability Induction (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=40566" title="Information Technology Induction (2021/22)">Information Technology Induction (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42928" title="Learning with Moodle (2021/22)">Learning with Moodle (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43304" title="Library Induction (2021/22)">Library Induction (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43211" title="MSc Business Analytics (2021/22)">MSc Business Analytics (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43209" title="MSc Electives (2021/22)">MSc Electives (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43218" title="Peer Assessment Portal (2021/22)">Peer Assessment Portal (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43490" title="SMM799 Applied Research Project for MSc Business Analytics (2021/22)">SMM799 Applied Research Project for MSc Business Analytics (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43213" title="Specialist Masters Programmes (2021/22)">Specialist Masters Programmes (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43464" title="Student Academic Skills and Wellbeing (2021/22)">Student Academic Skills and Wellbeing (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43908" title="Visa Guidance (2021/22)">Visa Guidance (2021/22)</a>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+    </div>
+</div><div id="theme_cul_boost_modulemenu" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-3">
+    <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1ba12620d3c89d77035" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Module Menu" href="#">
+        Module Menu
+    </a>
+    <div class="dropdown-menu mt-0" aria-labelledby="drop-down-620d3c8a1ba12620d3c89d77035">
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/grade/report/culuser/index.php?id=42782&amp;sesskey=X7FQ1XEYQV" >Grades</a>
+        <div class="dropdown-item dropdown-submenu">
+            <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1ba12620d3c89d77035" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  href="#">
+                Participants
+            </a>
+            <div class="dropdown-menu" aria-labelledby="drop-down-620d3c8a1ba12620d3c89d77035">
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/user/view.php?id=195504&amp;course=42782" >Mattheus Lim</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/user/index.php?id=42782" >Participants</a>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/badges/view.php?type=2&amp;id=42782" >Badges</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-0" >General</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-1" >Zoom Link for Online Teaching</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-2" >Protocol for Online Lectures</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-3" >Register your attendance here: F2F ONLY</a>
+        <div class="dropdown-item dropdown-submenu">
+            <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1ba12620d3c89d77035" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  href="#">
+                Week 1: Module Overview and Introduction to RMP, Capacity Allocation for Two Fares
+            </a>
+            <div class="dropdown-menu" aria-labelledby="drop-down-620d3c8a1ba12620d3c89d77035">
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/mod/resource/view.php?id=2145724" title="File">01 Course Overview and Quantity Based RM Part 1</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/mod/resource/view.php?id=2145727" title="File">01-R-Supplement</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/mod/resource/view.php?id=2145728" title="File">01-R-Supplement (pdf)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/mod/kalvidres/view.php?id=2184839" title="Video Resource">SMM641 Zoom Recording - 24th January 2022</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-4" >Week 1: Module Overview and Introduction to RMP, Capacity Allocation for Two Fares</a>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-5" >Week 2: Introduction to Dynamic Programming</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-6" >Week 3: Network Revenue Management Part 1</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-7" >Week 4: Network Revenue Management Part 2, Intro to LP</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-16" >Groups Selection</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-18" >Coursework Submission</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/local/kalturamediagallery/index.php?courseid=42782" >Media Gallery</a>
+    </div>
+</div>
+                            </div>
+                            <div class="nav-extras d-flex flex-wrap align-items-stretch ml-auto ml-lg-0">
+                                
+                                <div class="global_search d-none d-sm-flex flex-wrap justify-content-end p-0 ml-4">
+                                    <div class="slidersearchform d-flex flex-wrap align-items-center">
+                                        <form action="/search/index.php">
+                                            <label for="theme_cul_boost_id_q" class="accesshide">
+                                                Enter your search query
+                                            </label>
+                                            <input
+                                                id="theme_cul_boost_id_q"
+                                                type="text" 
+                                                name="q"
+                                                alt="Search for..."
+                                                placeholder="Search for..."
+                                            />
+                                            <button type="submit" class="btn btn-primary p-0">
+                                                <i class="fa fa-search"></i>
+                                                <span class="accesshide">Search</span>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="d-none d-sm-flex flex-wrap justify-content-end p-0 ml-4">
+                                    <div class=" d-flex flex-wrap align-items-center">
+                                       <div class="popover-region collapsed" data-region="popover-region-messages">
+    <a id="message-drawer-toggle-620d3c8a1d70e620d3c89d77036" class="nav-link d-inline-block popover-region-toggle position-relative" href="#"
+            role="button">
+        <i class="icon fa fa-comment fa-fw "  title="Toggle messaging drawer" aria-label="Toggle messaging drawer"></i>
+        <div class="count-container hidden" data-region="count-container"
+        aria-label="There are 0 unread conversations">0</div>
+    </a>
+    <span class="sr-only sr-only-focusable" data-region="jumpto" tabindex="-1"></span></div> 
+                                    </div>
+                                </div>                            
+                                <div class="usermenu d-flex flex-wrap align-items-center dropdown ml-4"><a data-toggle="dropdown" class="usermenu_header toggle-display d-flex flex-wrap align-items-center dropdown-toggle text-default" aria-label="User menu" href="javascript://void(0)"><span class="avatar current bg-light"><img src="https://moodle.city.ac.uk/pluginfile.php/2404040/user/icon/cul_boost/f2?rev=20985465" class="userpicture" width="36" height="36" alt="" /></span></a><div id="usermenu_content" class="usermenu_content m-0 pt-0 dropdown-menu dropdown-menu-right" role="menu"><div class="py-2 px-3 h5 m-0 bg-medium username">Mattheus Lim</div><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/my/"><span class="icon m-a-0"><i class="icon fa fa-tachometer fa-fw iconsmall"  title="My Moodle" aria-label="My Moodle"></i></span><span class="title">My Moodle</span></a></div><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/user/profile.php?id=195504"><span class="icon m-a-0"><i class="icon fa fa-user fa-fw iconsmall"  title="Profile" aria-label="Profile"></i></span><span class="title">Profile</span></a></div><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/grade/report/overview/index.php"><span class="icon m-a-0"><i class="icon fa fa-table fa-fw iconsmall"  title="Grades" aria-label="Grades"></i></span><span class="title">Grades</span></a></div><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/message/index.php"><span class="icon m-a-0"><i class="icon fa fa-comment fa-fw iconsmall"  title="Messages" aria-label="Messages"></i></span><span class="title">Messages</span></a></div><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/local/mymedia/mymedia.php"><span class="icon m-a-0"><i class="icon fa fa-arrow-circle-down fa-fw iconsmall"  title="My Media" aria-label="My Media"></i></span><span class="title">My Media</span></a></div><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/user/preferences.php"><span class="icon m-a-0"><i class="icon fa fa-wrench fa-fw iconsmall"  title="Preferences" aria-label="Preferences"></i></span><span class="title">Preferences</span></a></div><hr /><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/login/logout.php?sesskey=X7FQ1XEYQV"><span class="icon m-a-0"><i class="icon fa fa-sign-out fa-fw iconsmall"  title="Log out" aria-label="Log out"></i></span><span class="title">Log out</span></a></div></div></div>
+                                <div class="navbar-toggle d-lg-none ml-3">
+                                    <span class="icon-bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div class="drawer-wrap bg-white">
+    <div class="drawer d-flex flex-wrap justify-content-center pt-3">
+        <div class="drawer-content d-flex flex-wrap flex-column justify-content-stretch w-100">
+            <div class="navbar-toggle ml-auto mr-3">
+                <span class="icon-bar"></span>
+            </div>
+            <div class="mainmenu-wrap d-flex flex-column col">
+                <a id="theme_cul_boost_mymoodle" class="nav-item nav-link d-flex flex-wrap align-items-center justify-content-center py-3" href="https://moodle.city.ac.uk/my/" title="My Moodle">My Moodle</a><div id="theme_cul_boost_mymodules" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-3">
+    <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1b520620d3c89d77034" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="My Modules" href="#">
+        My Modules
+    </a>
+    <div class="dropdown-menu mt-0" aria-labelledby="drop-down-620d3c8a1b520620d3c89d77034">
+        <div class="dropdown-item dropdown-submenu">
+            <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1b520620d3c89d77034" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="2021-22" href="#">
+                2021-22
+            </a>
+            <div class="dropdown-menu" aria-labelledby="drop-down-620d3c8a1b520620d3c89d77034">
+                <div class="dropdown-item dropdown-submenu">
+                    <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1b520620d3c89d77034" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="PRD1_2021-22" href="#">
+                        Term 1
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="drop-down-620d3c8a1b520620d3c89d77034">
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42777" title="SMM634 Analytics Methods for Business (PRD1 A 2021/22)">SMM634 Analytics Methods for Business (PRD1 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42784" title="SMM635 Data Visualisation (PRD1 A 2021/22)">SMM635 Data Visualisation (PRD1 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42780" title="SMM638 Network Analytics (PRD1 A 2021/22)">SMM638 Network Analytics (PRD1 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43996" title="SMM691 Professional Ethics and Good Academic Practice (PRD1 A 2021/22)">SMM691 Professional Ethics and Good Academic Practice (PRD1 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43162" title="SMM692 Introduction to Python Programming (PRD1 A 2021/22)">SMM692 Introduction to Python Programming (PRD1 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43163" title="SMM693 Introduction to R Programming PRD1 A 2021/22)">SMM693 Introduction to R Programming PRD1 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42836" title="SMM750 Digital Technologies and Value Creation (PRD1 A 2021/22)">SMM750 Digital Technologies and Value Creation (PRD1 A 2021/22)</a>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                <div class="dropdown-item dropdown-submenu">
+                    <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1b520620d3c89d77034" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="PRD2_2021-22" href="#">
+                        Term 2
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="drop-down-620d3c8a1b520620d3c89d77034">
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42786" title="SMM636 Machine Learning (PRD2 A 2021/22)">SMM636 Machine Learning (PRD2 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42781" title="SMM640 Strategic Business Analytics (PRD2 A 2021/22)">SMM640 Strategic Business Analytics (PRD2 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782" title="SMM641 Revenue Management and Pricing (PRD2 A 2021/22)">SMM641 Revenue Management and Pricing (PRD2 A 2021/22)</a>
+                                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42843" title="SMM768 Applied Deep Learning (PRD2 A 2021/22)">SMM768 Applied Deep Learning (PRD2 A 2021/22)</a>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43246" title="Business Library Services (2021/22)">Business Library Services (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43534" title="Careers and Employability Induction (2021/22)">Careers and Employability Induction (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=40566" title="Information Technology Induction (2021/22)">Information Technology Induction (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42928" title="Learning with Moodle (2021/22)">Learning with Moodle (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43304" title="Library Induction (2021/22)">Library Induction (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43211" title="MSc Business Analytics (2021/22)">MSc Business Analytics (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43209" title="MSc Electives (2021/22)">MSc Electives (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43218" title="Peer Assessment Portal (2021/22)">Peer Assessment Portal (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43490" title="SMM799 Applied Research Project for MSc Business Analytics (2021/22)">SMM799 Applied Research Project for MSc Business Analytics (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43213" title="Specialist Masters Programmes (2021/22)">Specialist Masters Programmes (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43464" title="Student Academic Skills and Wellbeing (2021/22)">Student Academic Skills and Wellbeing (2021/22)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=43908" title="Visa Guidance (2021/22)">Visa Guidance (2021/22)</a>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+    </div>
+</div><div id="theme_cul_boost_modulemenu" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-3">
+    <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1ba12620d3c89d77035" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Module Menu" href="#">
+        Module Menu
+    </a>
+    <div class="dropdown-menu mt-0" aria-labelledby="drop-down-620d3c8a1ba12620d3c89d77035">
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/grade/report/culuser/index.php?id=42782&amp;sesskey=X7FQ1XEYQV" >Grades</a>
+        <div class="dropdown-item dropdown-submenu">
+            <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1ba12620d3c89d77035" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  href="#">
+                Participants
+            </a>
+            <div class="dropdown-menu" aria-labelledby="drop-down-620d3c8a1ba12620d3c89d77035">
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/user/view.php?id=195504&amp;course=42782" >Mattheus Lim</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/user/index.php?id=42782" >Participants</a>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/badges/view.php?type=2&amp;id=42782" >Badges</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-0" >General</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-1" >Zoom Link for Online Teaching</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-2" >Protocol for Online Lectures</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-3" >Register your attendance here: F2F ONLY</a>
+        <div class="dropdown-item dropdown-submenu">
+            <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1ba12620d3c89d77035" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  href="#">
+                Week 1: Module Overview and Introduction to RMP, Capacity Allocation for Two Fares
+            </a>
+            <div class="dropdown-menu" aria-labelledby="drop-down-620d3c8a1ba12620d3c89d77035">
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/mod/resource/view.php?id=2145724" title="File">01 Course Overview and Quantity Based RM Part 1</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/mod/resource/view.php?id=2145727" title="File">01-R-Supplement</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/mod/resource/view.php?id=2145728" title="File">01-R-Supplement (pdf)</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/mod/kalvidres/view.php?id=2184839" title="Video Resource">SMM641 Zoom Recording - 24th January 2022</a>
+                        <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-4" >Week 1: Module Overview and Introduction to RMP, Capacity Allocation for Two Fares</a>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-5" >Week 2: Introduction to Dynamic Programming</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-6" >Week 3: Network Revenue Management Part 1</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-7" >Week 4: Network Revenue Management Part 2, Intro to LP</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-16" >Groups Selection</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=42782#section-18" >Coursework Submission</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/local/kalturamediagallery/index.php?courseid=42782" >Media Gallery</a>
+    </div>
+</div>
+                <div class="help-menu-wrap bg-light mt-auto  bg-light">
+                    <li class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1a782620d3c89d77032" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"  aria-controls="drop-down-menu-620d3c8a1a782620d3c89d77032">
+        Tools
+    </a>
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-620d3c8a1a782620d3c89d77032" aria-labelledby="drop-down-620d3c8a1a782620d3c89d77032">
+                <a class="dropdown-item" role="menuitem" href="https://moodle.city.ac.uk/local/culrollover/" >Rollover Tool</a>
+                <a class="dropdown-item" role="menuitem" href="https://city-uk-ett.libguides.com/staff/moodle/new-year/import-rollover" target="_blank" >Guidance for Rollover</a>
+                <a class="dropdown-item" role="menuitem" href="https://blogs.city.ac.uk/moodle-health" target="_blank" >Moodle Health</a>
+    </div>
+</li><li class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-620d3c8a1a877620d3c89d77033" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"  aria-controls="drop-down-menu-620d3c8a1a877620d3c89d77033">
+        Help &amp; Support
+    </a>
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-620d3c8a1a877620d3c89d77033" aria-labelledby="drop-down-620d3c8a1a877620d3c89d77033">
+                <a class="dropdown-item" role="menuitem" href="https://mediaspace.city.ac.uk/media/Welcome+to+Moodle+2021-22/1_wz70ld7c" target="_blank" >Induction Video</a>
+                <a class="dropdown-item" role="menuitem" href="https://moodle.city.ac.uk/course/view.php?id=42928" >Learning with Moodle</a>
+                <a class="dropdown-item" role="menuitem" href="https://www.city.ac.uk/edtechguides/student " target="_blank" >Student Guidance</a>
+                <a class="dropdown-item" role="menuitem" href="https://www.city.ac.uk/edtechguides/staff" target="_blank" >Staff Guidance</a>
+                <a class="dropdown-item" role="menuitem" href="https://blogs.city.ac.uk/accessibility/moodle/" target="_blank" >Accessibility Help</a>
+                <a class="dropdown-item" role="menuitem" href="https://cityuni.service-now.com/sp/" target="_blank" >IT Service Desk</a>
+                <a class="dropdown-item" role="menuitem" href="https://www.city.ac.uk/about/city-information/legal/data-protection/" target="_blank" >Privacy Notice</a>
+    </div>
+</li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="page" class="position-relative d-print-block">
+
+        
+        <div class="page-header container-fluid text-center text-md-left">
+            <h1 class="pageheading font-weight-normal mb-0">SMM641 Revenue Management and Pricing (PRD2 A 2021/22)</h1>
+        </div>
+        
+        <div id="page-navbar" class="container-fluid">   
+            <div class="d-flex flex-wrap align-items-center mb-4">
+                <nav 
+                    class="breadcrumb-nav d-flex flex-wrap align-items-center justify-content-center justify-content-md-start col-12 col-md p-0"
+                    role="navigation"
+                    aria-label="breadcrumb"
+                >
+                    <nav aria-label="Navigation bar">
+    <ol class="breadcrumb">
+            <li class="breadcrumb-item d-inline-flex flex-wrap align-items-center">
+                <a class="d-flex align-items-center" href="/">
+                    <i class="fa fa-home"></i>
+                    <span class="accesshide"><b class="showoncollapse">Home</b>
+                    </span>
+                </a>
+            </li>
+                <li class="breadcrumb-item d-inline-flex flex-wrap align-items-center">
+                    <a href="https://moodle.city.ac.uk/course/index.php"  >Modules</a>
+                </li>
+                <li class="breadcrumb-item d-inline-flex flex-wrap align-items-center">
+                    <a href="https://moodle.city.ac.uk/course/view.php?id=42782"  title="SMM641 Revenue Management and Pricing (PRD2 A 2021/22)">SMM641_PRD2_A_2021-22</a>
+                </li>
+                <li class="breadcrumb-item d-inline-flex flex-wrap align-items-center">
+                    <a href="https://moodle.city.ac.uk/course/view.php?id=42782#section-4"  >Week 1: Module Overview and Introduction to RMP, Capacity Allocation for Two Fares</a>
+                </li>
+                <li class="breadcrumb-item d-inline-flex flex-wrap align-items-center">
+                    <a href="https://moodle.city.ac.uk/mod/resource/view.php?id=2145727" aria-current="page" title="File">01-R-Supplement</a>
+                </li>
+    </ol>
+</nav>
+                </nav>
+        
+                <div class="overlay">
+                    <div class="close-icon"></div>
+                </div>
+        
+                
+        
+        
+        
+            </div>
+        </div>
+        
+
+
+
+        
+        <div class="container-fluid"> 
+            <div id="page-content" class="row justify-content-center d-print-block">
+                <section id="region-main" class="col-12 pb-2 mb-4 border-0 " aria-label="Content">
+
+                        
+
+                    <span class="notifications" id="user-notifications"></span>
+                    <div role="main"><span id="maincontent"></span><h2>01-R-Supplement</h2><div class="resourcecontent resourcegeneral">
+  <iframe id="resourceobject" src="https://moodle.city.ac.uk/pluginfile.php/2592943/mod_resource/content/2/01-R-Supplement.html?embed=1">
+    Click <a href="https://moodle.city.ac.uk/pluginfile.php/2592943/mod_resource/content/2/01-R-Supplement.html" >01-R-Supplement.html</a> link to view the file.
+  </iframe>
+</div><div id="resourceintro" class="box py-3 mod_introbox"><p class="resourcedetails">1.2MB</p></div></div>
+                    <div class="mt-5 mb-1 activity-navigation container-fluid">
+<div class="row">
+    <div class="col-md-4">        <div class="float-left">
+                <a href="https://moodle.city.ac.uk/mod/resource/view.php?id=2145724&forceview=1" id="prev-activity-link" class="btn btn-link"  title="01 Course Overview and Quantity Based RM Part 1" >&#x25C0;&#xFE0E; 01 Course Overview and Quantity Based RM Part 1</a>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="mdl-align">
+            <div class="urlselect">
+    <form method="post" action="https://moodle.city.ac.uk/course/jumpto.php" class="form-inline" id="url_select_f620d3c89d77038">
+        <input type="hidden" name="sesskey" value="X7FQ1XEYQV">
+            <label for="jump-to-activity" class="sr-only">
+                Jump to...
+            </label>
+        <select  id="jump-to-activity" class="custom-select urlselect" name="jump"
+                 >
+                    <option value="" selected>Jump to...</option>
+                    <option value="/mod/forum/view.php?id=1894985&amp;forceview=1" >News forum</option>
+                    <option value="/mod/resource/view.php?id=2145712&amp;forceview=1" >SMM641_Syllabus (last updated 18 January 2022)</option>
+                    <option value="/mod/feedback/view.php?id=2173294&amp;forceview=1" >Monday 24th January: Submit your attendance here</option>
+                    <option value="/mod/feedback/view.php?id=2173293&amp;forceview=1" >Monday 31st January: Submit your attendance here </option>
+                    <option value="/mod/feedback/view.php?id=2173295&amp;forceview=1" >Monday 7th February : Submit your attendance here </option>
+                    <option value="/mod/feedback/view.php?id=2173296&amp;forceview=1" >Monday 14th February: Submit your attendance here  </option>
+                    <option value="/mod/feedback/view.php?id=2173297&amp;forceview=1" >Monday 21st February: Submit your attendance here </option>
+                    <option value="/mod/feedback/view.php?id=2173298&amp;forceview=1" >Monday 7th March: Submit your attendance here </option>
+                    <option value="/mod/feedback/view.php?id=2173299&amp;forceview=1" >Monday 14th March: Submit your attendance here </option>
+                    <option value="/mod/feedback/view.php?id=2173300&amp;forceview=1" >Monday 21st March: Submit your attendance here </option>
+                    <option value="/mod/feedback/view.php?id=2173301&amp;forceview=1" >Monday 28th March: Submit your attendance here </option>
+                    <option value="/mod/feedback/view.php?id=2173302&amp;forceview=1" >Monday 4th April: Submit your attendance here </option>
+                    <option value="/mod/resource/view.php?id=2145724&amp;forceview=1" >01 Course Overview and Quantity Based RM Part 1</option>
+                    <option value="/mod/resource/view.php?id=2145728&amp;forceview=1" >01-R-Supplement (pdf)</option>
+                    <option value="/mod/kalvidres/view.php?id=2184839&amp;forceview=1" >SMM641 Zoom Recording - 24th January 2022</option>
+                    <option value="/mod/resource/view.php?id=2145732&amp;forceview=1" >02 Intro to DP and Allocations for Multi Fare</option>
+                    <option value="/mod/resource/view.php?id=2145735&amp;forceview=1" >02-R-Supplement</option>
+                    <option value="/mod/resource/view.php?id=2145736&amp;forceview=1" >02-R-Supplement (pdf)</option>
+                    <option value="/mod/kalvidres/view.php?id=2193173&amp;forceview=1" >02 DP R Implementations</option>
+                    <option value="/mod/kalvidres/view.php?id=2194997&amp;forceview=1" >SMM641 Zoom Recording - 31st January 2022</option>
+                    <option value="/mod/resource/view.php?id=2145742&amp;forceview=1" >03 Network Revenue Management Part 1</option>
+                    <option value="/mod/resource/view.php?id=2145745&amp;forceview=1" >03 R Supplement</option>
+                    <option value="/mod/resource/view.php?id=2145746&amp;forceview=1" >03 R Supplement (pdf)</option>
+                    <option value="/mod/kalvidres/view.php?id=2199504&amp;forceview=1" >03 R supplement video</option>
+                    <option value="/mod/kalvidres/view.php?id=2199514&amp;forceview=1" >SMM641 Zoom Recording - 7th February 2022</option>
+                    <option value="/mod/resource/view.php?id=2203125&amp;forceview=1" >04 Intro to LP pre-class slides</option>
+                    <option value="/mod/resource/view.php?id=2145754&amp;forceview=1" >04-R-Supplement</option>
+                    <option value="/mod/resource/view.php?id=2145755&amp;forceview=1" >04-R-Supplement (pdf)</option>
+                    <option value="/mod/lti/view.php?id=2205516&amp;forceview=1" >SMM641 Zoom Recording - 14th February 2022</option>
+                    <option value="/mod/choicegroup/view.php?id=2145806&amp;forceview=1" >Group Selection for SMM641</option>
+                    <option value="/mod/resource/view.php?id=2145810&amp;forceview=1" >Problem Set 1</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary ml-1" value="Go">
+            </noscript>
+    </form>
+</div>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="float-right">
+                <a href="https://moodle.city.ac.uk/mod/resource/view.php?id=2145728&forceview=1" id="next-activity-link" class="btn btn-link"  title="01-R-Supplement (pdf)" >01-R-Supplement (pdf) &#x25B6;&#xFE0E;</a>
+
+        </div>
+</div>
+</div>
+</div>
+                    
+                </section>
+            </div>
+        </div>
+        <div
+    id="drawer-620d3c8a1fbff620d3c89d77039"
+    class=" drawer bg-white hidden"
+    aria-expanded="false"
+    aria-hidden="true"
+    data-region="right-hand-drawer"
+    role="region"
+    tabindex="0"
+>
+            <div id="message-drawer-620d3c8a1fbff620d3c89d77039" class="message-app" data-region="message-drawer" role="region">
+            <div class="closewidget bg-light border-bottom text-right">
+                <a class="text-dark" data-action="closedrawer" href="#"
+                   title="Close" aria-label="Close"
+                >
+                    <i class="icon fa fa-window-close fa-fw " aria-hidden="true"  ></i>
+                </a>
+            </div>
+            <div class="header-container position-relative" data-region="header-container">
+                <div class="hidden border-bottom px-2 py-3" aria-hidden="true" data-region="view-contacts">
+                    <div class="d-flex align-items-center">
+                        <div class="align-self-stretch">
+                            <a class="h-100 d-flex align-items-center mr-2" href="#" data-route-back role="button">
+                                <div class="icon-back-in-drawer">
+                                    <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"  ></i></span>
+                                    <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"  ></i></span>
+                                </div>
+                                <div class="icon-back-in-app">
+                                    <span class="dir-rtl-hide"><i class="icon fa fa-times fa-fw " aria-hidden="true"  ></i></span>
+                                </div>                            </a>
+                        </div>
+                        <div>
+                            Contacts
+                        </div>
+                        <div class="ml-auto">
+                            <a href="#" data-route="view-search" role="button" aria-label="Search">
+                                <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>                
+                <div
+                    class="hidden bg-white position-relative border-bottom p-1 p-sm-2"
+                    aria-hidden="true"
+                    data-region="view-conversation"
+                >
+                    <div class="hidden" data-region="header-content"></div>
+                    <div class="hidden" data-region="header-edit-mode">
+                        
+                        <div class="d-flex p-2 align-items-center">
+                            Messages selected:
+                            <span class="ml-1" data-region="message-selected-court">1</span>
+                            <button type="button" class="ml-auto close" aria-label="Cancel message selection"
+                                data-action="cancel-edit-mode">
+                                    <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div data-region="header-placeholder">
+                        <div class="d-flex">
+                            <div
+                                class="ml-2 rounded-circle bg-pulse-grey align-self-center"
+                                style="height: 38px; width: 38px"
+                            >
+                            </div>
+                            <div class="ml-2 " style="flex: 1">
+                                <div
+                                    class="mt-1 bg-pulse-grey w-75"
+                                    style="height: 16px;"
+                                >
+                                </div>
+                            </div>
+                            <div
+                                class="ml-2 bg-pulse-grey align-self-center"
+                                style="height: 16px; width: 20px"
+                            >
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="hidden position-absolute z-index-1"
+                        data-region="confirm-dialogue-container"
+                        style="top: 0; bottom: -1px; right: 0; left: 0; background: rgba(0,0,0,0.3);"
+                    ></div>
+                </div>                <div class="border-bottom  p-1 px-sm-2 py-sm-3" aria-hidden="false"  data-region="view-overview">
+                    <div class="d-flex align-items-center">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text pr-2 bg-white">
+                                    <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                            </div>
+                            <input
+                                type="text"
+                                class="form-control border-left-0"
+                                placeholder="Search"
+                                aria-label="Search"
+                                data-region="view-overview-search-input"
+                            >
+                        </div>
+                        <div class="ml-2">
+                            <a
+                                href="#"
+                                data-route="view-settings"
+                                data-route-param="195504"
+                                aria-label="Settings"
+                                role="button"
+                            >
+                                <i class="icon fa fa-cog fa-fw " aria-hidden="true"  ></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-right mt-sm-3">
+                        <a href="#" data-route="view-contacts" role="button">
+                            <i class="icon fa fa-user fa-fw " aria-hidden="true"  ></i>
+                            Contacts
+                            <span class="badge badge-primary bg-primary ml-2 hidden"
+                            data-region="contact-request-count"
+                            aria-label="There are 0 pending contact requests">
+                                0
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hidden border-bottom px-2 py-3 view-search"  aria-hidden="true" data-region="view-search">
+                    <div class="d-flex align-items-center">
+                        <a
+                            class="mr-2 align-self-stretch d-flex align-items-center"
+                            href="#"
+                            data-route-back
+                            data-action="cancel-search"
+                            role="button"
+                        >
+                            <div class="icon-back-in-drawer">
+                                <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"  ></i></span>
+                                <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"  ></i></span>
+                            </div>
+                            <div class="icon-back-in-app">
+                                <span class="dir-rtl-hide"><i class="icon fa fa-times fa-fw " aria-hidden="true"  ></i></span>
+                            </div>                        </a>
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Search"
+                                aria-label="Search"
+                                data-region="search-input"
+                            >
+                            <div class="input-group-append">
+                                <button
+                                    class="btn btn-outline-secondary"
+                                    type="button"
+                                    data-action="search"
+                                    aria-label="Search"
+                                >
+                                    <span data-region="search-icon-container">
+                                        <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                                    </span>
+                                    <span class="hidden" data-region="loading-icon-container">
+                                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div class="hidden border-bottom px-2 py-3" aria-hidden="true" data-region="view-settings">
+                    <div class="d-flex align-items-center">
+                        <div class="align-self-stretch" >
+                            <a class="h-100 d-flex mr-2 align-items-center" href="#" data-route-back role="button">
+                                <div class="icon-back-in-drawer">
+                                    <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"  ></i></span>
+                                    <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"  ></i></span>
+                                </div>
+                                <div class="icon-back-in-app">
+                                    <span class="dir-rtl-hide"><i class="icon fa fa-times fa-fw " aria-hidden="true"  ></i></span>
+                                </div>                            </a>
+                        </div>
+                        <div>
+                            Settings
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-container position-relative" data-region="body-container">
+                
+                <div
+                    class="hidden"
+                    data-region="view-contact"
+                    aria-hidden="true"
+                >
+                    <div class="p-2 pt-3" data-region="content-container"></div>
+                </div>                <div class="hidden h-100" data-region="view-contacts" aria-hidden="true" data-user-id="195504">
+                    <div class="d-flex flex-column h-100">
+                        <div class="p-3 border-bottom">
+                            <ul class="nav nav-pills nav-fill" role="tablist">
+                                <li class="nav-item">
+                                    <a
+                                        id="contacts-tab-620d3c8a1fbff620d3c89d77039"
+                                        class="nav-link active"
+                                        href="#contacts-tab-panel-620d3c8a1fbff620d3c89d77039"
+                                        data-toggle="tab"
+                                        data-action="show-contacts-section"
+                                        role="tab"
+                                        aria-controls="contacts-tab-panel-620d3c8a1fbff620d3c89d77039"
+                                        aria-selected="true"
+                                    >
+                                        Contacts
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a
+                                        id="requests-tab-620d3c8a1fbff620d3c89d77039"
+                                        class="nav-link"
+                                        href="#requests-tab-panel-620d3c8a1fbff620d3c89d77039"
+                                        data-toggle="tab"
+                                        data-action="show-requests-section"
+                                        role="tab"
+                                        aria-controls="requests-tab-panel-620d3c8a1fbff620d3c89d77039"
+                                        aria-selected="false"
+                                    >
+                                        Requests
+                                        <span class="badge badge-primary bg-primary ml-2 hidden"
+                                        data-region="contact-request-count"
+                                        aria-label="There are 0 pending contact requests">
+                                            0
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content d-flex flex-column h-100">
+                                            <div
+                    class="tab-pane fade show active h-100 lazy-load-list"
+                    aria-live="polite"
+                    data-region="lazy-load-list"
+                    data-user-id="195504"
+                                        id="contacts-tab-panel-620d3c8a1fbff620d3c89d77039"
+                    data-section="contacts"
+                    role="tabpanel"
+                    aria-labelledby="contacts-tab-620d3c8a1fbff620d3c89d77039"
+
+                >
+                    
+                    <div class="hidden text-center p-2" data-region="empty-message-container">
+                        No contacts
+                    </div>
+                    <div class="hidden list-group" data-region="content-container">
+                        
+                    </div>
+                    <div class="list-group" data-region="placeholder-container">
+                        
+                    </div>
+                    <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                    </div>
+                </div>
+                
+                                            <div
+                    class="tab-pane fade h-100 lazy-load-list"
+                    aria-live="polite"
+                    data-region="lazy-load-list"
+                    data-user-id="195504"
+                                        id="requests-tab-panel-620d3c8a1fbff620d3c89d77039"
+                    data-section="requests"
+                    role="tabpanel"
+                    aria-labelledby="requests-tab-620d3c8a1fbff620d3c89d77039"
+
+                >
+                    
+                    <div class="hidden text-center p-2" data-region="empty-message-container">
+                        No contact requests
+                    </div>
+                    <div class="hidden list-group" data-region="content-container">
+                        
+                    </div>
+                    <div class="list-group" data-region="placeholder-container">
+                        
+                    </div>
+                    <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+                </div>                
+                <div
+                    class="view-conversation hidden h-100"
+                    aria-hidden="true"
+                    data-region="view-conversation"
+                    data-user-id="195504"
+                    data-midnight="1644969600"
+                    data-message-poll-min="10"
+                    data-message-poll-max="120"
+                    data-message-poll-after-max="300"
+                    style="overflow-y: auto; overflow-x: hidden"
+                >
+                    <div class="position-relative h-100" data-region="content-container" style="overflow-y: auto; overflow-x: hidden">
+                        <div class="content-message-container hidden h-100 px-2 pt-0" data-region="content-message-container" role="log" style="overflow-y: auto; overflow-x: hidden">
+                            <div class="py-3 sticky-top z-index-1 border-bottom text-center hidden" data-region="contact-request-sent-message-container">
+                                <p class="m-0">Contact request sent</p>
+                                <p class="font-italic font-weight-light" data-region="text"></p>
+                            </div>
+                            <div class="p-3 text-center hidden" data-region="self-conversation-message-container">
+                                <p class="m-0">Personal space</p>
+                                <p class="font-italic font-weight-light" data-region="text">Save draft messages, links, notes etc. to access later.</p>
+                           </div>
+                            <div class="hidden text-center p-3" data-region="more-messages-loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+                        </div>
+                        <div class="p-4 w-100 h-100 hidden position-absolute z-index-1" data-region="confirm-dialogue-container" style="top: 0; background: rgba(0,0,0,0.3);">
+                            
+                            <div class="p-3 bg-white" data-region="confirm-dialogue" role="alert">
+                                <p class="text-muted" data-region="dialogue-text"></p>
+                                <div class="mb-2 custom-control custom-checkbox hidden" data-region="delete-messages-for-all-users-toggle-container">
+                                    <input type="checkbox" class="custom-control-input" id="delete-messages-for-all-users" data-region="delete-messages-for-all-users-toggle">
+                                    <label class="custom-control-label text-muted" for="delete-messages-for-all-users">
+                                        Delete for me and for everyone else
+                                    </label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-block">
+                                    <span data-region="dialogue-button-text">Block</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-unblock">
+                                    <span data-region="dialogue-button-text">Unblock</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-remove-contact">
+                                    <span data-region="dialogue-button-text">Remove</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-add-contact">
+                                    <span data-region="dialogue-button-text">Add</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-delete-selected-messages">
+                                    <span data-region="dialogue-button-text">Delete</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-delete-conversation">
+                                    <span data-region="dialogue-button-text">Delete</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="request-add-contact">
+                                    <span data-region="dialogue-button-text">Send contact request</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block hidden" data-action="accept-contact-request">
+                                    <span data-region="dialogue-button-text">Accept and add to contacts</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-secondary btn-block hidden" data-action="decline-contact-request">
+                                    <span data-region="dialogue-button-text">Decline</span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-block" data-action="okay-confirm">OK</button>
+                                <button type="button" class="btn btn-secondary btn-block" data-action="cancel-confirm">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="px-2 pb-2 pt-0" data-region="content-placeholder">
+                            <div class="h-100 d-flex flex-column">
+                                <div
+                                    class="px-2 pb-2 pt-0 bg-light h-100"
+                                    style="overflow-y: auto"
+                                >
+                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                    <div class="mt-4">
+                                        <div class="mb-4">
+                                            <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                        <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="mr-2">
+                                                    <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                                </div>
+                                                <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                                <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                            </div>
+                                            <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                            <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                        </div>
+                                    </div>                                </div>
+                            </div>                        </div>
+                    </div>
+                </div>
+                
+                <div
+                    class="hidden"
+                    aria-hidden="true"
+                    data-region="view-group-info"
+                >
+                    <div
+                        class="pt-3 h-100 d-flex flex-column"
+                        data-region="group-info-content-container"
+                        style="overflow-y: auto"
+                    ></div>
+                </div>                <div class="h-100 view-overview-body" aria-hidden="false" data-region="view-overview"  data-user-id="195504">
+                    <div id="message-drawer-view-overview-container-620d3c8a1fbff620d3c89d77039" class="d-flex flex-column h-100" style="overflow-y: auto">
+                            
+                            
+                            <div
+                                class="section border-0 card"
+                                data-region="view-overview-favourites"
+                            >
+                                <div id="view-overview-favourites-toggle" class="card-header p-0" data-region="toggle">
+                                    <button
+                                        class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed"
+                                        data-toggle="collapse"
+                                        data-target="#view-overview-favourites-target-620d3c8a1fbff620d3c89d77039"
+                                        aria-expanded="false"
+                                        aria-controls="view-overview-favourites-target-620d3c8a1fbff620d3c89d77039"
+                                    >
+                                        <span class="collapsed-icon-container">
+                                            <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i>
+                                        </span>
+                                        <span class="expanded-icon-container">
+                                            <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"  ></i>
+                                        </span>
+                                        <span class="font-weight-bold">Starred</span>
+                                        <small class="hidden ml-1" data-region="section-total-count-container"
+                                        aria-label=" total conversations">
+                                            (<span data-region="section-total-count"></span>)
+                                        </small>
+                                        <span class="hidden ml-2" data-region="loading-icon-container">
+                                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                        </span>
+                                        <span class="hidden badge badge-pill badge-primary ml-auto bg-primary"
+                                        data-region="section-unread-count"
+                                        >
+                                            
+                                        </span>
+                                    </button>
+                                </div>
+                                                            <div
+                                class="collapse border-bottom  lazy-load-list"
+                                aria-live="polite"
+                                data-region="lazy-load-list"
+                                data-user-id="195504"
+                                            id="view-overview-favourites-target-620d3c8a1fbff620d3c89d77039"
+            aria-labelledby="view-overview-favourites-toggle"
+            data-parent="#message-drawer-view-overview-container-620d3c8a1fbff620d3c89d77039"
+
+                            >
+                                
+                                <div class="hidden text-center p-2" data-region="empty-message-container">
+                                            <p class="text-muted mt-2">No starred conversations</p>
+
+                                </div>
+                                <div class="hidden list-group" data-region="content-container">
+                                    
+                                </div>
+                                <div class="list-group" data-region="placeholder-container">
+                                            <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+
+                                </div>
+                                <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            
+                            <div
+                                class="section border-0 card"
+                                data-region="view-overview-group-messages"
+                            >
+                                <div id="view-overview-group-messages-toggle" class="card-header p-0" data-region="toggle">
+                                    <button
+                                        class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed"
+                                        data-toggle="collapse"
+                                        data-target="#view-overview-group-messages-target-620d3c8a1fbff620d3c89d77039"
+                                        aria-expanded="false"
+                                        aria-controls="view-overview-group-messages-target-620d3c8a1fbff620d3c89d77039"
+                                    >
+                                        <span class="collapsed-icon-container">
+                                            <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i>
+                                        </span>
+                                        <span class="expanded-icon-container">
+                                            <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"  ></i>
+                                        </span>
+                                        <span class="font-weight-bold">Group</span>
+                                        <small class="hidden ml-1" data-region="section-total-count-container"
+                                        aria-label=" total conversations">
+                                            (<span data-region="section-total-count"></span>)
+                                        </small>
+                                        <span class="hidden ml-2" data-region="loading-icon-container">
+                                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                        </span>
+                                        <span class="hidden badge badge-pill badge-primary ml-auto bg-primary"
+                                        data-region="section-unread-count"
+                                        >
+                                            
+                                        </span>
+                                    </button>
+                                </div>
+                                                            <div
+                                class="collapse border-bottom  lazy-load-list"
+                                aria-live="polite"
+                                data-region="lazy-load-list"
+                                data-user-id="195504"
+                                            id="view-overview-group-messages-target-620d3c8a1fbff620d3c89d77039"
+            aria-labelledby="view-overview-group-messages-toggle"
+            data-parent="#message-drawer-view-overview-container-620d3c8a1fbff620d3c89d77039"
+
+                            >
+                                
+                                <div class="hidden text-center p-2" data-region="empty-message-container">
+                                            <p class="text-muted mt-2">No group conversations</p>
+
+                                </div>
+                                <div class="hidden list-group" data-region="content-container">
+                                    
+                                </div>
+                                <div class="list-group" data-region="placeholder-container">
+                                            <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+
+                                </div>
+                                <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            
+                            <div
+                                class="section border-0 card"
+                                data-region="view-overview-messages"
+                            >
+                                <div id="view-overview-messages-toggle" class="card-header p-0" data-region="toggle">
+                                    <button
+                                        class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed"
+                                        data-toggle="collapse"
+                                        data-target="#view-overview-messages-target-620d3c8a1fbff620d3c89d77039"
+                                        aria-expanded="false"
+                                        aria-controls="view-overview-messages-target-620d3c8a1fbff620d3c89d77039"
+                                    >
+                                        <span class="collapsed-icon-container">
+                                            <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i>
+                                        </span>
+                                        <span class="expanded-icon-container">
+                                            <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"  ></i>
+                                        </span>
+                                        <span class="font-weight-bold">Private</span>
+                                        <small class="hidden ml-1" data-region="section-total-count-container"
+                                        aria-label=" total conversations">
+                                            (<span data-region="section-total-count"></span>)
+                                        </small>
+                                        <span class="hidden ml-2" data-region="loading-icon-container">
+                                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                        </span>
+                                        <span class="hidden badge badge-pill badge-primary ml-auto bg-primary"
+                                        data-region="section-unread-count"
+                                        >
+                                            
+                                        </span>
+                                    </button>
+                                </div>
+                                                            <div
+                                class="collapse border-bottom  lazy-load-list"
+                                aria-live="polite"
+                                data-region="lazy-load-list"
+                                data-user-id="195504"
+                                            id="view-overview-messages-target-620d3c8a1fbff620d3c89d77039"
+            aria-labelledby="view-overview-messages-toggle"
+            data-parent="#message-drawer-view-overview-container-620d3c8a1fbff620d3c89d77039"
+
+                            >
+                                
+                                <div class="hidden text-center p-2" data-region="empty-message-container">
+                                            <p class="text-muted mt-2">No private conversations</p>
+
+                                </div>
+                                <div class="hidden list-group" data-region="content-container">
+                                    
+                                </div>
+                                <div class="list-group" data-region="placeholder-container">
+                                            <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+
+                                </div>
+                                <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+                
+                <div
+                    data-region="view-search"
+                    aria-hidden="true"
+                    class="h-100 hidden"
+                    data-user-id="195504"
+                    data-users-offset="0"
+                    data-messages-offset="0"
+                    style="overflow-y: auto"
+                    
+                >
+                    <div class="hidden" data-region="search-results-container" style="overflow-y: auto">
+                        
+                        <div class="d-flex flex-column">
+                            <div class="mb-3 bg-white" data-region="all-contacts-container">
+                                <div data-region="contacts-container"  class="pt-2">
+                                    <h4 class="h6 px-2">Contacts</h4>
+                                    <div class="list-group" data-region="list"></div>
+                                </div>
+                                <div data-region="non-contacts-container" class="pt-2 border-top">
+                                    <h4 class="h6 px-2">Non-contacts</h4>
+                                    <div class="list-group" data-region="list"></div>
+                                </div>
+                                <div class="text-right">
+                                    <button class="btn btn-link text-primary" data-action="load-more-users">
+                                        <span data-region="button-text">Load more</span>
+                                        <span data-region="loading-icon-container" class="hidden"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-white" data-region="messages-container">
+                                <h4 class="h6 px-2 pt-2">Messages</h4>
+                                <div class="list-group" data-region="list"></div>
+                                <div class="text-right">
+                                    <button class="btn btn-link text-primary" data-action="load-more-messages">
+                                        <span data-region="button-text">Load more</span>
+                                        <span data-region="loading-icon-container" class="hidden"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="hidden p-3 text-center" data-region="no-results-container">No results</p>
+                        </div>                    </div>
+                    <div class="hidden" data-region="loading-placeholder">
+                        <div class="text-center pt-3 icon-size-4"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+                    </div>
+                    <div class="p-3 text-center" data-region="empty-message-container">
+                        <p>Search people and messages</p>
+                    </div>
+                </div>                
+                <div class="h-100 hidden bg-white" aria-hidden="true" data-region="view-settings">
+                    <div class="hidden" data-region="content-container">
+                        
+                        <div data-region="settings" class="p-3">
+                            <h3 class="h6 font-weight-bold">Privacy</h3>
+                            <p>You can restrict who can message you</p>
+                            <div data-preference="blocknoncontacts" class="mb-3">
+                                <fieldset>
+                                    <legend class="sr-only">Accept messages from:</legend>
+                                        <div class="custom-control custom-radio mb-2">
+                                            <input
+                                                type="radio"
+                                                name="message_blocknoncontacts"
+                                                class="custom-control-input"
+                                                id="block-noncontacts-620d3c8a1fbff620d3c89d77039-1"
+                                                value="1"
+                                            >
+                                            <label class="custom-control-label ml-2" for="block-noncontacts-620d3c8a1fbff620d3c89d77039-1">
+                                                My contacts only
+                                            </label>
+                                        </div>
+                                        <div class="custom-control custom-radio mb-2">
+                                            <input
+                                                type="radio"
+                                                name="message_blocknoncontacts"
+                                                class="custom-control-input"
+                                                id="block-noncontacts-620d3c8a1fbff620d3c89d77039-0"
+                                                value="0"
+                                            >
+                                            <label class="custom-control-label ml-2" for="block-noncontacts-620d3c8a1fbff620d3c89d77039-0">
+                                                My contacts and anyone in my courses
+                                            </label>
+                                        </div>
+                                </fieldset>
+                            </div>
+                        
+                            <div class="hidden" data-region="notification-preference-container">
+                                <h3 class="mb-2 mt-4 h6 font-weight-bold">Notification preferences</h3>
+                            </div>
+                        
+                            <h3 class="mb-2 mt-4 h6 font-weight-bold">General</h3>
+                            <div data-preference="entertosend">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="enter-to-send-620d3c8a1fbff620d3c89d77039" >
+                                    <label class="custom-control-label" for="enter-to-send-620d3c8a1fbff620d3c89d77039">
+                                        Use enter to send
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-region="placeholder-container">
+                        
+                        <div class="d-flex flex-column p-3">
+                            <div class="w-25 bg-pulse-grey h6" style="height: 18px"></div>
+                            <div class="w-75 bg-pulse-grey mb-4" style="height: 18px"></div>
+                            <div class="mb-3">
+                                <div class="w-100 d-flex mb-3">
+                                    <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                                <div class="w-100 d-flex mb-3">
+                                    <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                                <div class="w-100 d-flex mb-3">
+                                    <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                            </div>
+                            <div class="w-50 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px"></div>
+                            <div class="mb-4">
+                                <div class="w-100 d-flex mb-2 align-items-center">
+                                    <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                                    <div class="bg-pulse-grey w-25 ml-2" style="height: 18px"></div>
+                                </div>
+                                <div class="w-100 d-flex mb-2 align-items-center">
+                                    <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                                    <div class="bg-pulse-grey w-25 ml-2" style="height: 18px"></div>
+                                </div>
+                            </div>
+                            <div class="w-25 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px"></div>
+                            <div class="mb-3">
+                                <div class="w-100 d-flex mb-2 align-items-center">
+                                    <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                                    <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                                </div>
+                            </div>
+                        </div>                    </div>
+                </div>            </div>
+            <div class="footer-container position-relative" data-region="footer-container">
+                
+                <div
+                    class="hidden border-top bg-white position-relative"
+                    aria-hidden="true"
+                    data-region="view-conversation"
+                    data-enter-to-send="0"
+                >
+                    <div class="hidden p-sm-2" data-region="content-messages-footer-container">
+                        
+                            <div
+                                class="emoji-auto-complete-container w-100 hidden"
+                                data-region="emoji-auto-complete-container"
+                                aria-live="polite"
+                                aria-hidden="true"
+                            >
+                            </div>
+                        <div class="d-flex mt-sm-1">
+                            <textarea
+                                dir="auto"
+                                data-region="send-message-txt"
+                                class="form-control bg-light"
+                                rows="3"
+                                data-auto-rows
+                                data-min-rows="3"
+                                data-max-rows="5"
+                                aria-label="Write a message..."
+                                placeholder="Write a message..."
+                                style="resize: none"
+                                maxlength="4096"
+                            ></textarea>
+                        
+                            <div class="position-relative d-flex flex-column">
+                                    <div
+                                        data-region="emoji-picker-container"
+                                        class="emoji-picker-container hidden"
+                                        aria-hidden="true"
+                                    >
+                                        
+                                        <div
+                                            data-region="emoji-picker"
+                                            class="card shadow emoji-picker"
+                                        >
+                                            <div class="card-header px-1 pt-1 pb-0 d-flex justify-content-between flex-shrink-0">
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button selected"
+                                                    data-action="show-category"
+                                                    data-category="Recent"
+                                                    title="Recent"
+                                                >
+                                                    <i class="icon fa fa-clock-o fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Smileys & People"
+                                                    title="Smileys & people"
+                                                >
+                                                    <i class="icon fa fa-smile-o fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Animals & Nature"
+                                                    title="Animals & nature"
+                                                >
+                                                    <i class="icon fa fa-leaf fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Food & Drink"
+                                                    title="Food & drink"
+                                                >
+                                                    <i class="icon fa fa-cutlery fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Travel & Places"
+                                                    title="Travel & places"
+                                                >
+                                                    <i class="icon fa fa-plane fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Activities"
+                                                    title="Activities"
+                                                >
+                                                    <i class="icon fa fa-futbol-o fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Objects"
+                                                    title="Objects"
+                                                >
+                                                    <i class="icon fa fa-lightbulb-o fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Symbols"
+                                                    title="Symbols"
+                                                >
+                                                    <i class="icon fa fa-heart fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-outline-secondary icon-no-margin category-button"
+                                                    data-action="show-category"
+                                                    data-category="Flags"
+                                                    title="Flags"
+                                                >
+                                                    <i class="icon fa fa-flag fa-fw " aria-hidden="true"  ></i>
+                                                </button>
+                                            </div>
+                                            <div class="card-body p-2 d-flex flex-column overflow-hidden">
+                                                <div class="input-group mb-1 flex-shrink-0">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text pr-0 bg-white text-muted">
+                                                            <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                                                        </span>
+                                                    </div>
+                                                    <input
+                                                        type="text"
+                                                        class="form-control border-left-0"
+                                                        placeholder="Search"
+                                                        aria-label="Search"
+                                                        data-region="search-input"
+                                                    >
+                                                </div>
+                                                <div class="flex-grow-1 overflow-auto emojis-container h-100" data-region="emojis-container">
+                                                    <div class="position-relative" data-region="row-container"></div>
+                                                </div>
+                                                <div class="flex-grow-1 overflow-auto search-results-container h-100 hidden" data-region="search-results-container">
+                                                    <div class="position-relative" data-region="row-container"></div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="card-footer d-flex flex-shrink-0"
+                                                data-region="footer"
+                                            >
+                                                <div class="emoji-preview" data-region="emoji-preview"></div>
+                                                <div data-region="emoji-short-name" class="emoji-short-name text-muted text-wrap ml-2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="btn btn-link btn-icon icon-size-3 ml-1"
+                                        aria-label="Toggle emoji picker"
+                                        data-action="toggle-emoji-picker"
+                                    >
+                                        <i class="icon fa fa-smile-o fa-fw " aria-hidden="true"  ></i>
+                                    </button>
+                                <button
+                                    class="btn btn-link btn-icon icon-size-3 ml-1 mt-auto"
+                                    aria-label="Send message"
+                                    data-action="send-message"
+                                >
+                                    <span data-region="send-icon-container"><i class="icon fa fa-paper-plane fa-fw " aria-hidden="true"  ></i></span>
+                                    <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden p-sm-2" data-region="content-messages-footer-edit-mode-container">
+                        
+                        <div class="d-flex p-3 justify-content-end">
+                            <button
+                                class="btn btn-link btn-icon my-1 icon-size-4"
+                                data-action="delete-selected-messages"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Delete selected messages"
+                            >
+                                <span data-region="icon-container"><i class="icon fa fa-trash fa-fw " aria-hidden="true"  ></i></span>
+                                <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                                <span class="sr-only">Delete selected messages</span>
+                            </button>
+                        </div>                    </div>
+                    <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-require-contact-container">
+                        
+                        <div class="p-3 bg-white">
+                            <p data-region="title"></p>
+                            <p class="text-muted" data-region="text"></p>
+                            <button type="button" class="btn btn-primary btn-block" data-action="request-add-contact">
+                                <span data-region="dialogue-button-text">Send contact request</span>
+                                <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-require-unblock-container">
+                        
+                        <div class="p-3 bg-white">
+                            <p class="text-muted" data-region="text">You have blocked this user.</p>
+                            <button type="button" class="btn btn-primary btn-block" data-action="request-unblock">
+                                <span data-region="dialogue-button-text">Unblock user</span>
+                                <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hidden bg-secondary p-sm-3" data-region="content-messages-footer-unable-to-message">
+                        
+                        <div class="p-3 bg-white">
+                            <p class="text-muted" data-region="text">You are unable to message this user</p>
+                        </div>
+                    </div>
+                    <div class="p-sm-2" data-region="placeholder-container">
+                        <div class="d-flex">
+                            <div class="bg-pulse-grey w-100" style="height: 80px"></div>
+                            <div class="mx-2 mb-2 align-self-end bg-pulse-grey" style="height: 20px; width: 20px"></div>
+                        </div>                    </div>
+                    <div
+                        class="hidden position-absolute z-index-1"
+                        data-region="confirm-dialogue-container"
+                        style="top: -1px; bottom: 0; right: 0; left: 0; background: rgba(0,0,0,0.3);"
+                    ></div>
+                </div>                    <div data-region="view-overview" class="text-center">
+                        <a href="https://moodle.city.ac.uk/message/index.php">
+                            See all
+                        </a>
+                    </div>
+            </div>
+        </div>
+
+</div>
+        <div id="goto-top-link">
+            <a 
+                class="btn btn-light"
+                role="button"
+                href="#"
+                data-content="Go to top"
+                data-toggle="popover"
+                data-placement="left"
+            >
+                <i class="icon fa fa-arrow-up fa-fw " aria-hidden="true"  ></i>
+            </a>
+        </div>
+        <footer id="page-footer" class="footer mt-5 w-100 bg-primary text-white">
+            <div class="container-fluid">
+                <div class="footerlinks d-flex flex-wrap text-center text-md-left py-5">
+                    <div class="footnote col-12 col-md-6 mb-4 mb-md-0 p-0">
+                        <p></p><p></p>
+<p>Cass Business School has been renamed to Bayes Business School. There may still be references to Cass Business School in content produced before September 2021.&nbsp;<span style="font-size: 1rem; letter-spacing: 0.1px;">Find out more about the name change <a href="https://www.bayes.city.ac.uk/about/more/our-name-change" target="_blank">on our website</a>.</span></p><p>City, University of London is an independent member institution of 
+the University of London. Established by Royal Charter in 1836, the 
+University of London consists of 18 independent member institutions with
+ outstanding global reputations and several
+  prestigious central academic bodies and activities.</p>
+<p></p>
+<h1 class="h5">Contact us</h1>+44 (0)20 7040 5060
+<br><a href="https://www.city.ac.uk/about/find-contact/contact" target="_blank">Make an enquiry
+</a><br>
+<p></p><br><p></p>
+                    </div>
+                    <img
+                        class="footerlogo mx-auto mr-md-0 ml-md-auto"
+                        src="https://moodle.city.ac.uk/theme/image.php/cul_boost/theme/1644910456/bayes-footerlogo"
+                        alt="City, University of London"
+                    />
+                </div>
+            </div>
+            <div class="footer-bottom py-3">
+                <div class="container-fluid d-flex flex-wrap align-items-between">
+                    <div class="copyright">
+                        &copy; 2022 City, University of London
+                    </div>
+                    <a
+                        href="#top"
+                        class="scrolltop text-white mx-auto"
+                    >
+                        Back to top
+                        <i class="fa fa-angle-up ml-2"></i>
+                    </a>
+                    <div class="footerlinks">
+                        <p></p>
+<p><a href="https://www.city.ac.uk/about/city-information/legal" target="_blank"><span id="docs-internal-guid-27beeefd-a7e6-cd7c-4ba4-90a72ee33b72">Legal</span></a>
+</p>
+<p>
+  <a href="https://cityuni.service-now.com/">Help &amp; Support</a>
+</p>
+<p>
+  <a href="https://blogs.city.ac.uk/accessibility/moodle/" id="accessibility">Accessibility</a>
+</p>
+<br>
+<p></p>
+                    </div>            
+                </div>        
+            </div>    
+        </footer>
+        
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-40916233-1']);
+        _gaq.push(['_trackPageview','BBBSCH/BBMSCB/SMM641_PRD2_A_2021-22/Student/mod-resource-view/id=2145727']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        </script>        
+<script>
+  window.addEventListener("load", function() {
+    require(["jquery", "core/log"], function($, logger) {
+      if ($(document.body).is(".theme-cass.path-course-view")) {
+        logger.info("Preventing Page resource click handler.");
+        $(".modtype_page .instancename").on("click", function(evt) {
+          evt.stopPropagation();
+        });
+      }
+    });
+  });
+</script>            <script>
+                var ally_module_maps = {"file_resources":[],"assignment_files":[],"forum_files":[],"folder_files":[],"glossary_files":[],"lesson_files":[]};
+                var ally_section_maps = [];
+                var ally_annotation_maps = {"block_html":[],"mod_book":{"intros":[],"chapters":[]},"mod_forum":{"posts":[],"intros":{"1894985":"forum:forum:intro:76714"}},"mod_glossary":{"entries":[],"intros":[]},"mod_hsuforum":{"posts":[],"intros":[]},"mod_lesson":[],"mod_page":{"intros":[],"content":[]}};
+            </script><script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://moodle.city.ac.uk/lib/requirejs.php/1644910456/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://moodle.city.ac.uk/lib/javascript.php/1644910456/lib/jquery/jquery-3.5.1.min',
+        jqueryui: 'https://moodle.city.ac.uk/lib/javascript.php/1644910456/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://moodle.city.ac.uk/lib/javascript.php/1644910456/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://moodle.city.ac.uk/lib/javascript.php/1644910456/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");require(['core/first'], function() {
+require(['core/prefetch']);
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://moodle.city.ac.uk/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage('en', {
+  "Audio Player": "Audio Player",
+  "Video Player": "Video Player",
+  "Play": "Play",
+  "Pause": "Pause",
+  "Replay": "Replay",
+  "Current Time": "Current Time",
+  "Duration": "Duration",
+  "Remaining Time": "Remaining Time",
+  "Stream Type": "Stream Type",
+  "LIVE": "LIVE",
+  "Seek to live, currently behind live": "Seek to live, currently behind live",
+  "Seek to live, currently playing live": "Seek to live, currently playing live",
+  "Loaded": "Loaded",
+  "Progress": "Progress",
+  "Progress Bar": "Progress Bar",
+  "progress bar timing: currentTime={1} duration={2}": "{1} of {2}",
+  "Fullscreen": "Fullscreen",
+  "Non-Fullscreen": "Non-Fullscreen",
+  "Mute": "Mute",
+  "Unmute": "Unmute",
+  "Playback Rate": "Playback Rate",
+  "Subtitles": "Subtitles",
+  "subtitles off": "subtitles off",
+  "Captions": "Captions",
+  "captions off": "captions off",
+  "Chapters": "Chapters",
+  "Descriptions": "Descriptions",
+  "descriptions off": "descriptions off",
+  "Audio Track": "Audio Track",
+  "Volume Level": "Volume Level",
+  "You aborted the media playback": "You aborted the media playback",
+  "A network error caused the media download to fail part-way.": "A network error caused the media download to fail part-way.",
+  "The media could not be loaded, either because the server or network failed or because the format is not supported.": "The media could not be loaded, either because the server or network failed or because the format is not supported.",
+  "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.",
+  "No compatible source was found for this media.": "No compatible source was found for this media.",
+  "The media is encrypted and we do not have the keys to decrypt it.": "The media is encrypted and we do not have the keys to decrypt it.",
+  "Play Video": "Play Video",
+  "Close": "Close",
+  "Close Modal Dialog": "Close Modal Dialog",
+  "Modal Window": "Modal Window",
+  "This is a modal window": "This is a modal window",
+  "This modal can be closed by pressing the Escape key or activating the close button.": "This modal can be closed by pressing the Escape key or activating the close button.",
+  ", opens captions settings dialog": ", opens captions settings dialog",
+  ", opens subtitles settings dialog": ", opens subtitles settings dialog",
+  ", opens descriptions settings dialog": ", opens descriptions settings dialog",
+  ", selected": ", selected",
+  "captions settings": "captions settings",
+  "subtitles settings": "subtitles settings",
+  "descriptions settings": "descriptions settings",
+  "Text": "Text",
+  "White": "White",
+  "Black": "Black",
+  "Red": "Red",
+  "Green": "Green",
+  "Blue": "Blue",
+  "Yellow": "Yellow",
+  "Magenta": "Magenta",
+  "Cyan": "Cyan",
+  "Background": "Background",
+  "Window": "Window",
+  "Transparent": "Transparent",
+  "Semi-Transparent": "Semi-Transparent",
+  "Opaque": "Opaque",
+  "Font Size": "Font Size",
+  "Text Edge Style": "Text Edge Style",
+  "None": "None",
+  "Raised": "Raised",
+  "Depressed": "Depressed",
+  "Uniform": "Uniform",
+  "Dropshadow": "Dropshadow",
+  "Font Family": "Font Family",
+  "Proportional Sans-Serif": "Proportional Sans-Serif",
+  "Monospace Sans-Serif": "Monospace Sans-Serif",
+  "Proportional Serif": "Proportional Serif",
+  "Monospace Serif": "Monospace Serif",
+  "Casual": "Casual",
+  "Script": "Script",
+  "Small Caps": "Small Caps",
+  "Reset": "Reset",
+  "restore all settings to the default values": "restore all settings to the default values",
+  "Done": "Done",
+  "Caption Settings Dialog": "Caption Settings Dialog",
+  "Beginning of dialog window. Escape will cancel and close the window.": "Beginning of dialog window. Escape will cancel and close the window.",
+  "End of dialog window.": "End of dialog window.",
+  "{1} is loading.": "{1} is loading.",
+  "Exit Picture-in-Picture": "Exit Picture-in-Picture",
+  "Picture-in-Picture": "Picture-in-Picture"
+});
+
+    });
+});;
+M.util.js_pending('filter_ally/main'); require(['filter_ally/main'], function(amd) {amd.init("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NDUwMzQ2MzMsImNvdXJzZV9pZCI6NDI3ODIsInJvbGVzIjoidXJuOmx0aTpyb2xlOmltc1wvbGlzXC9MZWFybmVyIiwidXNlcl9pZCI6MTk1NTA0LCJsb2NhbGUiOiJlbiIsInJldHVybl91cmwiOiJodHRwczpcL1wvbW9vZGxlLmNpdHkuYWMudWsifQ.eo-MmOmStaa4EHIyFUdIuAlQkA3mwOXT6wXweuwAfZo", {"adminurl":"https:\/\/prod-eu-central-1.ally.ac\/api\/v1\/717\/lti\/institution","pushurl":"https:\/\/prod-eu-central-1.ally.ac\/api\/v1\/events","clientid":"717"}, false, true, "42782", {}); M.util.js_complete('filter_ally/main');});;
+M.util.js_pending('theme_cul_boost/dropdowns'); require(['theme_cul_boost/dropdowns'], function(amd) {amd.init(); M.util.js_complete('theme_cul_boost/dropdowns');});;
+M.util.js_pending('theme_cul_boost/drawermenu'); require(['theme_cul_boost/drawermenu'], function(amd) {amd.init(); M.util.js_complete('theme_cul_boost/drawermenu');});;
+M.util.js_pending('theme_cul_boost/navsearch'); require(['theme_cul_boost/navsearch'], function(amd) {amd.init(); M.util.js_complete('theme_cul_boost/navsearch');});;
+M.util.js_pending('theme_cul_boost/courselisting'); require(['theme_cul_boost/courselisting'], function(amd) {amd.init(); M.util.js_complete('theme_cul_boost/courselisting');});;
+M.util.js_pending('theme_cul_boost/settingsmenu'); require(['theme_cul_boost/settingsmenu'], function(amd) {amd.init(null); M.util.js_complete('theme_cul_boost/settingsmenu');});;
+M.util.js_pending('theme_cul_boost/navigation'); require(['theme_cul_boost/navigation'], function(amd) {amd.init(); M.util.js_complete('theme_cul_boost/navigation');});;
+M.util.js_pending('theme_cul_boost/stickynav'); require(['theme_cul_boost/stickynav'], function(amd) {amd.init(); M.util.js_complete('theme_cul_boost/stickynav');});;
+M.util.js_pending('theme_cul_boost/fixedbuttons'); require(['theme_cul_boost/fixedbuttons'], function(amd) {amd.init(); M.util.js_complete('theme_cul_boost/fixedbuttons');});;
+M.util.js_pending('theme_cul_boost/modalposition'); require(['theme_cul_boost/modalposition'], function(amd) {amd.init(); M.util.js_complete('theme_cul_boost/modalposition');});;
+M.util.js_pending('theme_cul_boost/showcourse'); require(['theme_cul_boost/showcourse'], function(amd) {amd.init("42782"); M.util.js_complete('theme_cul_boost/showcourse');});;
+M.util.js_pending('theme_cul_boost/offsetheader'); require(['theme_cul_boost/offsetheader'], function(amd) {amd.init(); M.util.js_complete('theme_cul_boost/offsetheader');});;
+M.util.js_pending('theme_cul_boost/favourites'); require(['theme_cul_boost/favourites'], function(amd) {amd.init(); M.util.js_complete('theme_cul_boost/favourites');});;
+M.util.js_pending('theme_cul_boost/favourite'); require(['theme_cul_boost/favourite'], function(amd) {amd.init(); M.util.js_complete('theme_cul_boost/favourite');});;
+M.util.js_pending('block_settings/settingsblock'); require(['block_settings/settingsblock'], function(amd) {amd.init("118330", null); M.util.js_complete('block_settings/settingsblock');});;
+
+require(
+[
+    'jquery',
+    'core_message/message_popover'
+],
+function(
+    $,
+    Popover
+) {
+    var toggle = $('#message-drawer-toggle-620d3c8a1d70e620d3c89d77036');
+    Popover.init(toggle);
+});
+;
+M.util.js_pending('report_allylti/main'); require(['report_allylti/main'], function(amd) {amd.init(); M.util.js_complete('report_allylti/main');});;
+
+        require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+            CustomEvents.define('#jump-to-activity', [CustomEvents.events.accessibleChange]);
+            $('#jump-to-activity').on(CustomEvents.events.accessibleChange, function() {
+                if (!$(this).val()) {
+                    return false;
+                }
+                $('#url_select_f620d3c89d77038').submit();
+            });
+        });
+    ;
+
+require(['jquery', 'core_message/message_drawer'], function($, MessageDrawer) {
+    var root = $('#message-drawer-620d3c8a1fbff620d3c89d77039');
+    MessageDrawer.init(root, '620d3c8a1fbff620d3c89d77039', false);
+});
+;
+
+M.util.js_pending('theme_cul_boost/loader');
+require(['theme_cul_boost/loader'], function() {
+    M.util.js_complete('theme_cul_boost/loader');
+});
+;
+M.util.js_pending('theme_snap/wcloader'); require(['theme_snap/wcloader'], function(amd) {amd.init("{\"theme_snap\\\/snapce\":[\"https:\\\/\\\/moodle.city.ac.uk\\\/pluginfile.php\\\/2592943\\\/theme_snap\\\/vendorjs\\\/snap-custom-elements\\\/snap-ce\"]}"); M.util.js_complete('theme_snap/wcloader');});;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(2592943, [], true); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","ok":"OK","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} links to this file","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() { M.util.js_pending('random620d3c89d77031'); Y.on('domready', function() { M.util.init_maximised_embed(Y, "resourceobject");  M.util.js_complete('random620d3c89d77031'); });
+Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
+});
+Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"en"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random620d3c89d770310'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random620d3c89d770310'); });
+})();
+//]]>
+</script>
+
+    </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"e4ad0f6bec","applicationID":"4092862","transactionName":"ZwAANhEFCkpQWkVfV15KNxAKSwlWVRZDU0tfEBABBksSUFROH0ZQQA==","queueTime":0,"applicationTime":301,"atts":"S0cDQFkfGUQ=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

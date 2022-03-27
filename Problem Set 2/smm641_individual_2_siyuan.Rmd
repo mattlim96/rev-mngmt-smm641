@@ -1,0 +1,342 @@
+---
+title: "smm641_individual_2_siyuan"
+author: "siyuan"
+date: '2022-03-27'
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Question 1
+
+```{r library and data}
+
+# load library
+library(nloptr)
+library(stargazer)
+library(todor)
+
+# load data
+Congestion.Pricing <- read.csv(file = 'CongestionPricing.csv')
+
+# Count sample size 
+N.Sample=nrow(Congestion.Pricing)
+
+# input total population size
+N.Total=192000
+```
+
+## (a).Maximize revenue and a single congestion charge
+
+### Revenue 
+
+```{r revenue }
+
+## Step 1 ##
+
+# Compute maximum willingness to pay for each client across time 
+# slots and enter it as a new column
+for (i in 1:N.Sample){
+  Congestion.Pricing$maxWTP[i]=max(Congestion.Pricing[i,2:3])
+}
+
+# Set upper bound for price search
+maxprice=max(Congestion.Pricing$maxWTP)
+
+# Defining empty array demand and revenue variables 
+demand=rep(NA,maxprice)
+revenue=rep(NA,maxprice)
+
+## Step 2 ##
+
+# Find how many drivers at each price level and the revenue at this price level
+for (p in 1:maxprice){
+  demand[p]=sum(Congestion.Pricing$maxWTP>=p)
+  revenue[p]=p*demand[p]
+}
+
+# Identifying the Best Price which maximize the revenue
+revenueBest_1=max(revenue)
+priceBest_1=which(revenue == revenueBest_1)
+
+## Step 3 ##
+
+# Plot revenue at different price level
+xaxis=1:maxprice
+plot(xaxis,revenue,pch = 16, type="s",col="blue",las=1, xaxt="n",
+     xlab="Price",ylab="Revenue (in £)",
+     main="Revenue and Price Under a Single Congestion Charge")
+xticks <- seq(0, maxprice, by=2)
+axis(side = 1, at = xticks) 
+axis(side = 1, at = priceBest_1) 
+lines(c(priceBest_1,priceBest_1),c(0, revenueBest_1),lty=2)
+axis(side = 2, at = round(revenueBest_1,3),las=1,pos=20, tick=F)
+lines(c(20,priceBest_1),c(revenueBest_1, revenueBest_1),lty=2)
+
+# Assume the ratio of population and sample can also represent the revenue 
+revenueBest.total_1 = revenueBest_1*N.Total/N.Sample
+
+print(paste("If a single price is to be charged across all time slots, the optimal price is:",priceBest_1))
+
+print(paste("If a single price is to be charged across all time slots, the optimal revenue is:",revenueBest.total_1))
+```
+### Emission
+```{r Emission}
+## Step 4 ##
+
+# get total demand in sample at the best price 
+Sample.demand = demand[priceBest_1]=sum(Congestion.Pricing$maxWTP>=priceBest_1)
+
+# total number of driver 
+Total.driver =(Sample.demand/N.Sample)*N.Total
+
+# get average speed
+Avg.speed = 30 - 0.0625 * (((Sample.demand/N.Sample)*N.Total)/1000)
+
+# compute total emission
+Total.Emission_1= Total.driver * (617.5-16.7 * Avg.speed)
+
+print(paste("If a single price is to be charged across all time slots, the emission is:",Total.Emission_1))
+```
+
+
+## (b).Maximize revenue and a peak period pricing
+
+### Revenue
+
+```{r Revenue}
+# Set price for Non-peak period 
+basePrice=7
+
+# Defining empty array demand and revenue variables
+demandNonPeak<-rep(0,maxprice)
+demandPeak<-rep(0,maxprice)
+revenue_2<-rep(0,maxprice)
+
+## Step 1 ##
+
+# Create a empty list for surplus non-peak
+surplusNonPeak<-rep(0,N.Sample)
+
+# For each client compute their surplus on no-peak time .
+for (i in 1:N.Sample){
+  surplusNonPeak[i]=Congestion.Pricing[i,3]-basePrice
+  # generate new column(s) and add this information to Congestion.Pricing:
+  Congestion.Pricing$maxsurplusNonPeak[i]=Congestion.Pricing[i,3]-basePrice
+}
+
+## Step 2 ##
+
+# Compute clients' surpluses for Peak across all possible Peak Price choices
+surplusPeak<-matrix(0,N.Sample,maxprice)
+
+for (p in 1:maxprice){
+  for (i in 1:N.Sample){
+    surplusPeak[i,p]=Congestion.Pricing[i,2]-p
+  }
+}
+
+## Step 3 ##
+
+# Compare a client's surplus from Non-Peak and Peak price level
+
+# If a client's surplus from Non-Peak is greater than their surplus for Peak
+# and if the client's surplus from NonPeak is greater than 0, that client will purchase Non-Peak.
+
+# If a client's surplus from Peak is greater than their surplus for Non-Peak
+# and if the client's surplus from Peak is greater than 0, that client will purchase Peak.
+
+# If both surpluses are less than 0, the customer will not buy.
+
+for (p in 1:maxprice){
+  demandNonPeak[p]=sum((surplusNonPeak>surplusPeak[,p])*(surplusNonPeak>=0))
+  demandPeak[p]=sum((surplusPeak[,p]>=surplusNonPeak)*(surplusPeak[,p]>=0))
+  revenue[p]=basePrice*demandNonPeak[p]+p*demandPeak[p]
+}
+
+# Plot Non-Peak Demand vs Peak Period Price
+xaxis=1:maxprice
+plot(xaxis,demandNonPeak,pch = 16, type="s",col="blue", las=1, xaxt="n",
+     xlab="Price for Peak Period",ylab="Non-Peak Period Demand", 
+     main="Non-Peak Demand vs Peak Period Price")
+xticks <- seq(0, maxprice, by=2)
+axis(side = 1, at = xticks)
+
+# Plot Peak Demand vs Peak Period Price
+xaxis=1:maxprice
+plot(xaxis,demandPeak,pch = 16, type="s",col="blue", las=1, xaxt="n",
+     xlab="Price for Peak Period",ylab="Peak Period Demand",
+      main="Peak Demand vs Peak Period Price")
+xticks <- seq(0, maxprice, by=2)
+axis(side = 1, at = xticks)
+
+## Step 4 ##
+
+# Identifying the Best Price which maximize the revenue
+revenueBest_2= max(revenue[basePrice:maxprice])
+priceBest_2=which(revenue == revenueBest_2)
+
+# Plotting Revenue vs Peak Period Price
+xaxis=1:maxprice
+plot(xaxis,revenue,pch = 16, type="s",col="blue", las=1, xaxt="n",
+     xlab="Price for Peak Period",ylab="Total Revenue",
+     main="Revenue vs Peak Period Price")
+xticks <- seq(0, maxprice, by=2)
+axis(side = 1, at = xticks)
+axis(side = 1, at = priceBest_2) 
+lines(c(priceBest_2,priceBest_2),c(0, revenueBest_2),lty=2)
+axis(side = 2, at = round(revenueBest_2,3),las=1)
+lines(c(0,priceBest_2),c(revenueBest_2, revenueBest_2),lty=2)
+
+# Assume the ratio of population and sample in peak and non-peak can also represent the revenue 
+demandNonPeak_1=(demandNonPeak[priceBest_2]/N.Sample)*N.Total
+demandPeak_1=(demandPeak[priceBest_2]/N.Sample)*N.Total
+revenueBest.total_2 = basePrice * demandNonPeak_1 + priceBest_2 * demandPeak_1
+
+print(paste("When other periods have a base price of 7 for non-peak, the optimal price for the peak slot is:",priceBest_2))
+print(paste("When other periods have a base price of 7 for non-peak, the optimal revenue is:",revenueBest.total_2))
+```
+
+
+### Emission
+
+```{r Emission}
+
+## Step 5 ##
+
+# Get average speed for peak and non peak
+Avg.speed.peak = (30 - 0.0625 * (demandPeak_1/1000))
+
+Avg.speed.nonpeak = (30 - 0.0625 * (demandNonPeak_1/1000))
+
+# compute emission per car in peak 
+if (Avg.speed.peak<25){
+  Emission.perCar.peak = 617.5 - 16.7 * Avg.speed.peak
+}else{
+  Emission.perCar.peak = 235.0 - 1.4* Avg.speed.peak
+}
+
+# compute emission per car in non-peak 
+if (Avg.speed.nonpeak<25){
+  Emission.perCar.nonpeak = 617.5 - 16.7 * Avg.speed.nonpeak
+}else{
+  Emission.perCar.nonpeak = 235.0 - 1.4 * Avg.speed.nonpeak
+}
+
+# compute total emission
+Total.Emission_2 = demandPeak_1* Emission.perCar.peak + demandNonPeak_1 * Emission.perCar.nonpeak
+
+print(paste("When other periods have a base price of 7 for non-peak, the total emission is:",Total.Emission_2))
+
+```
+
+## (c).Minimize emissions rather than maximizing revenue
+
+```{r cars}
+
+## step 1 ##
+
+# create objective function 
+eval_f <- function(x){
+  
+  basePrice=7
+  
+  peakPrice=x
+  
+  # compute demand non-peak
+  demandNonPeak_2=(demandNonPeak[x]/N.Sample)*192000
+
+  # compute demand peak
+  demandPeak_2=(demandPeak[x]/N.Sample)*192000
+
+  # compute average speed peak
+  Avg.speed.peak_2 = (30 - 0.0625 * (demandPeak_2/1000))
+  
+  # compute average speed non-peak
+  Avg.speed.nonpeak_2 = (30 - 0.0625 * (demandNonPeak_2/1000))
+  
+  if (Avg.speed.peak_2<25){
+    Emission.perCar.peak_2 = 617.5 - 16.7 * Avg.speed.peak_2
+    } else{
+      Emission.perCar.peak_2 = 235.0 - 1.4* Avg.speed.peak_2
+      }
+  
+  if (Avg.speed.nonpeak_2<25){
+    Emission.perCar.nonpeak_2 = 617.5 - 16.7 * Avg.speed.nonpeak_2
+    } else{
+      Emission.perCar.nonpeak_2 = 235.0 - 1.4 * Avg.speed.nonpeak_2
+    }
+  
+  # compute total emission
+  Total.Emission_3 = demandPeak_2 * Emission.perCar.peak_2 + demandNonPeak_2 * Emission.perCar.nonpeak_2
+  
+  # set objective as minimize the emission 
+  objfunction = Total.Emission_3
+  
+  return(objfunction)
+}
+
+## step 2 ##
+
+# create constrain function 
+eval_g_ineq <- function(x) {
+  
+  peakPrice=x
+  
+  basePrice=7
+  
+  Revenue.limit = 1100000
+  
+  Total.demand = 192000
+  
+  demandNonPeak_2=(demandNonPeak[x]/N.Sample)*192000
+
+  demandPeak_2=(demandPeak[x]/N.Sample)*192000
+  
+  # compute total revenue
+  total.revenue = basePrice * demandNonPeak_2 + peakPrice * demandPeak_2
+  
+  # Constraint 1: Demand.peak >= 0
+  # Constraint 2: Demand.nonpeak >= 0
+  # Constraint 3: total Demand <= 192000
+  # Constraint 4: total revenue >= 1100000
+  constraint <- c(-demandPeak_2,
+                  -demandNonPeak_2,
+                  demandPeak_2 + demandNonPeak_2 - Total.demand,
+                  -total.revenue + Revenue.limit
+  )
+  
+  return(constraint)
+}
+
+# initial values
+x0 <- 7
+# lower and upper bounds of control 
+lb <- 7
+ub <- 17
+opts <- list( "algorithm" = "NLOPT_LN_COBYLA",
+              "xtol_rel"  = 1.0e-9,
+              "maxeval"   = 1000)
+result <- nloptr(x0=x0,eval_f=eval_f,lb=lb,ub=ub,
+                 eval_g_ineq=eval_g_ineq,opts=opts)
+print(result)
+
+priceOpt<-result$solution
+EmissionMini<-result$objective
+
+# compute total revenue
+demandNonPeak_2=(demandNonPeak[priceOpt]/N.Sample)*192000
+demandPeak_2=(demandPeak[priceOpt]/N.Sample)*192000
+total.revenue = 7 * demandNonPeak_2 + priceOpt * demandPeak_2
+
+print(paste("The Optimal Peak Price under the objective of minising emission is:",priceOpt))
+
+print(paste("The minimised Emission is:",EmissionMini))
+
+print(paste("The revenue under this is:",total.revenue))
+```
+
